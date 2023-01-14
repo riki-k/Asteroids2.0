@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
         //velocity = Vector2.zero;
         playerRb2 = GetComponent<Rigidbody2D>();
         rotation_dir = 0;
-        rotation_speed = 150;
+        rotation_speed = 10;
     }
 
     // Update is called once per frame
@@ -31,14 +31,14 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            rotation_dir = 1 * rotation_speed * Time.deltaTime;
-            transform.Rotate(new Vector3(0, 0, rotation_dir));
+            rotation_dir = 0.1f * rotation_speed * Time.deltaTime;
+            playerRb2.AddTorque(rotation_dir, ForceMode2D.Impulse);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            rotation_dir = -1 * rotation_speed * Time.deltaTime;
-            transform.Rotate(new Vector3(0, 0, rotation_dir));
+            rotation_dir = -0.1f * rotation_speed * Time.deltaTime;
+            playerRb2.AddTorque(rotation_dir, ForceMode2D.Impulse);
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
