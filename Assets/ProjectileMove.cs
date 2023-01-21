@@ -5,17 +5,20 @@ using UnityEngine;
 public class ProjectileMove : MonoBehaviour
 {
     private float speed;
+    private Rigidbody2D projRB;
 
     // Start is called before the first frame update
     void Start()
     {
         speed = 10;
+        projRB = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(transform.right * Time.deltaTime * speed);
+        Debug.Log("projectile position" + transform.rotation.eulerAngles);
+        transform.Translate(Vector3.right * Time.deltaTime * speed);
         destroyOutLimits();
     }
 

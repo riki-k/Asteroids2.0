@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameObject projectile;
+    private GameObject gun;
 
     private Rigidbody2D playerRb2;
+    private SpriteRenderer playerSprite;
     private float rotation_dir;
     private float rotation_speed;
 
@@ -15,6 +17,7 @@ public class PlayerController : MonoBehaviour
     {
         //velocity = Vector2.zero;
         playerRb2 = GetComponent<Rigidbody2D>();
+        playerSprite = GetComponent<SpriteRenderer>();
         rotation_dir = 0;
         rotation_speed = 10;
     }
@@ -31,19 +34,27 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            rotation_dir = 0.1f * rotation_speed * Time.deltaTime;
+            rotation_dir = 0.2f * rotation_speed * Time.deltaTime;
             playerRb2.AddTorque(rotation_dir, ForceMode2D.Impulse);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            rotation_dir = -0.1f * rotation_speed * Time.deltaTime;
+            rotation_dir = -0.2f * rotation_speed * Time.deltaTime;
             playerRb2.AddTorque(rotation_dir, ForceMode2D.Impulse);
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectile, transform.position, transform.rotation);
+            gun = this.gameObject.transform.GetChild(0).gameObject;
+            Instantiate(projectile, gun.transform.position, gun.transform.rotation);
+        }
+
+        //maybe add a command to stabilize the ship
+
+        if (Input.GetKey(KeyCode.T))
+        {
+            teleport();
         }
 
         toroidal_space();
@@ -72,6 +83,12 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, borders.y, transform.position.z);
         }
+    }
+
+    void teleport()
+    {
+        transform.position = new Vector3(Random.Range(10, Screen.width), Random.Range(10, Screen.height - 10), -1);
+        Debug.Log(Random.Range(10, Screen.width));
     }
 
 }
