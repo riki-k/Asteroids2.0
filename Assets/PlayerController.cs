@@ -48,7 +48,12 @@ public class PlayerController : MonoBehaviour
             Instantiate(projectile, gun.transform.position, gun.transform.rotation);
         }
 
-        //maybe add a command to stabilize the ship
+        //stabilize the ship
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            playerRb2.velocity = Vector2.zero;
+            playerRb2.angularVelocity = 0;
+        }
 
         if (Input.GetKey(KeyCode.T))
         {
