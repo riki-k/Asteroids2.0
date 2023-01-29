@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     private GameObject gun;
 
     private Rigidbody2D playerRb2;
-    private SpriteRenderer playerSprite;
     private float rotation_dir;
     private float rotation_speed;
 
@@ -17,9 +16,8 @@ public class PlayerController : MonoBehaviour
     {
         //velocity = Vector2.zero;
         playerRb2 = GetComponent<Rigidbody2D>();
-        playerSprite = GetComponent<SpriteRenderer>();
         rotation_dir = 0;
-        rotation_speed = 10;
+        rotation_speed = 5;
     }
 
     // Update is called once per frame
