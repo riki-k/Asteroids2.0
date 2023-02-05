@@ -6,6 +6,7 @@ public class MovingAsteroids : MonoBehaviour
 {
     private float speed;
     private bool move;
+    public int asteroids_counter;
 
     private Rigidbody2D body2d;
 
@@ -66,7 +67,8 @@ public class MovingAsteroids : MonoBehaviour
         if (collision.gameObject.CompareTag("Projectile"))
         {
             Destroy(gameObject);
-            //spawnManager.asteroids_counter--;
+            //asteroids_counter--;
+            FindObjectOfType<SpawnManager>().asteroids_counter--;
         }
     }
 

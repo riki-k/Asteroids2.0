@@ -8,7 +8,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject ufo;
     public GameObject spaceship;
 
-    private int asteroids_counter = 0;
+    public int asteroids_counter = 0;
     private float startDelay = 1.0f;
     private float spawnInterval = 2.0f;
 

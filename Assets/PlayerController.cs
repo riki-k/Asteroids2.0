@@ -8,40 +8,55 @@ public class PlayerController : MonoBehaviour
     private GameObject gun;
 
     private Rigidbody2D playerRb2;
+    private SpriteRenderer playersprite;
     private float rotation_dir;
     private float rotation_speed;
 
     // Start is called before the first frame update
     void Start()
     {
-        //velocity = Vector2.zero;
         playerRb2 = GetComponent<Rigidbody2D>();
+        playersprite = GetComponent<SpriteRenderer>();
         rotation_dir = 0;
         rotation_speed = 5;
+
+        //adjust the scale and the rotation speed based on texture
+        //if the texture is spaceship.png
+        //0.2-->x 0.15-->y
+        if(playersprite.sprite.texture.name == "Spaceship")
+        {
+            transform.localScale = new Vector3(0.2f, 0.15f, 1f);
+            rotation_speed = 0.5f;
+        }
+
+        //if the texture is player rectangle least the transform scale
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Rotate(Vector3.zero);
-
+        //move forward
         if (Input.GetKeyDown(KeyCode.W))
         {
             playerRb2.AddForce(transform.right, ForceMode2D.Impulse);
         }
 
+        //right rotation
         if (Input.GetKey(KeyCode.A))
         {
-            rotation_dir = 0.2f * rotation_speed * Time.deltaTime;
+            rotation_dir = 0.1f * rotation_speed * Time.deltaTime;
             playerRb2.AddTorque(rotation_dir, ForceMode2D.Impulse);
         }
 
+        //left rotation
         if (Input.GetKey(KeyCode.D))
         {
-            rotation_dir = -0.2f * rotation_speed * Time.deltaTime;
+            rotation_dir = -0.1f * rotation_speed * Time.deltaTime;
             playerRb2.AddTorque(rotation_dir, ForceMode2D.Impulse);
         }
 
+        //shoot
         if (Input.GetKeyDown(KeyCode.Space))
         {
             gun = this.gameObject.transform.GetChild(0).gameObject;
@@ -55,6 +70,7 @@ public class PlayerController : MonoBehaviour
             playerRb2.angularVelocity = 0;
         }
 
+        //teleport the ship
         if (Input.GetKey(KeyCode.T))
         {
             teleport();
@@ -91,7 +107,6 @@ public class PlayerController : MonoBehaviour
     void teleport()
     {
         transform.position = new Vector3(Random.Range(10, Screen.width), Random.Range(10, Screen.height - 10), -1);
-        Debug.Log(Random.Range(10, Screen.width));
     }
 
 }
