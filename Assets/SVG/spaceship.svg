@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="spaceship.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1258">
+      <stop
+         style="stop-color:#00c6ff;stop-opacity:1;"
+         offset="0"
+         id="stop1254" />
+      <stop
+         style="stop-color:#00c6ff;stop-opacity:0;"
+         offset="1"
+         id="stop1256" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1149">
+      <stop
+         style="stop-color:#00ffff;stop-opacity:1;"
+         offset="0"
+         id="stop1145" />
+      <stop
+         style="stop-color:#00ceff;stop-opacity:0"
+         offset="1"
+         id="stop1147" />
+    </linearGradient>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1141"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1137"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect908"
+       is_visible="true"
+       lpeversion="1" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1149"
+       id="linearGradient1151"
+       x1="496.93192"
+       y1="1980.0203"
+       x2="496.92984"
+       y2="2008.0253"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,0.26458333,-0.26458333,0,570.0014,305.07319)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1149"
+       id="linearGradient1163"
+       x1="498.8891"
+       y1="2022.578"
+       x2="498.53339"
+       y2="2047.8381"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="pad"
+       gradientTransform="matrix(0.26458333,0,0,0.26458333,-1.6885853,22.604055)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1258"
+       id="linearGradient1260"
+       x1="125.4881"
+       y1="378.49591"
+       x2="143.09595"
+       y2="365.23355"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(304.65647,-568.11148)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="467.20801"
+     inkscape:cy="1460.9922"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-nodes="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:type="star"
+       style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:round"
+       id="path837"
+       sodipodi:sides="3"
+       sodipodi:cx="116.41667"
+       sodipodi:cy="49.892857"
+       sodipodi:r1="101.47799"
+       sodipodi:r2="50.738995"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 204.29919,100.63185 -87.88252,0 -87.882515,0 43.941258,-76.10849 43.941257,-76.108493 43.94126,76.108491 z"
+       inkscape:transform-center-x="1.4666666e-06"
+       inkscape:transform-center-y="-25.369496" />
+    <path
+       style="fill:#c8c8e0;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 191.86397,453.79303 -118.689414,68.52537 -0.004,-69.16111"
+       id="path1202"
+       inkscape:export-filename="C:\Users\ricca\OneDrive\Progetti\Asteroids2.0\Assets\Sprite\Spaceship.png"
+       inkscape:export-xdpi="107.70354"
+       inkscape:export-ydpi="107.70354" />
+    <path
+       style="fill:#c8c8e0;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 192.96349,419.6097 73.174566,350.44954 v 69.16016"
+       id="path1200"
+       inkscape:export-filename="C:\Users\ricca\OneDrive\Progetti\Asteroids2.0\Assets\Sprite\Spaceship.png"
+       inkscape:export-xdpi="107.70354"
+       inkscape:export-ydpi="107.70354" />
+    <path
+       id="path861"
+       style="fill:#66677b;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 133.81683,459.62671 a 87.3125,23.056549 0 0 1 -87.312504,-23.05655 87.3125,23.056549 0 0 1 87.312504,-23.05655 87.3125,23.056549 0 0 1 87.3125,23.05655 87.3125,23.056549 0 0 1 -87.3125,23.05655 z"
+       inkscape:export-filename="C:\Users\ricca\OneDrive\Progetti\Asteroids2.0\Assets\Sprite\Spaceship.png"
+       inkscape:export-xdpi="107.70354"
+       inkscape:export-ydpi="107.70354" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 221.12934,436.57013 v -1.00173 h 5.99635 v 2.00453 h -5.99687 z"
+       id="path895"
+       inkscape:export-filename="C:\Users\ricca\OneDrive\Progetti\Asteroids2.0\Assets\Sprite\Spaceship.png"
+       inkscape:export-xdpi="107.70354"
+       inkscape:export-ydpi="107.70354" />
+    <ellipse
+       style="fill:url(#linearGradient1260);fill-opacity:1;stroke:#000000;stroke-width:0.345374;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path918"
+       cx="436.70245"
+       cy="-191.61493"
+       rx="10.877292"
+       ry="18.466352"
+       inkscape:export-filename="C:\Users\ricca\OneDrive\Progetti\Asteroids2.0\Assets\Sprite\Spaceship.png"
+       inkscape:export-xdpi="107.70354"
+       inkscape:export-ydpi="107.70354"
+       transform="rotate(90)" />
+    <path
+       style="fill:#b4c8e0;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 73.174566,350.44954 -7.06953,7.06953 7.06953,62.09063"
+       id="path924"
+       inkscape:export-filename="C:\Users\ricca\OneDrive\Progetti\Asteroids2.0\Assets\Sprite\Spaceship.png"
+       inkscape:export-xdpi="107.70354"
+       inkscape:export-ydpi="107.70354" />
+    <path
+       style="fill:#b4c8e0;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 73.174576,522.31838 -7.07233,-7.07232 7.0686,-62.08879"
+       id="path926"
+       inkscape:export-filename="C:\Users\ricca\OneDrive\Progetti\Asteroids2.0\Assets\Sprite\Spaceship.png"
+       inkscape:export-xdpi="107.70354"
+       inkscape:export-ydpi="107.70354" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 103.40224,554.80823 h 15.0005"
+       id="path981" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 103.40224,554.80823 1.29305,4.82573"
+       id="path983" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 118.40274,554.80823 -1.29413,4.82975"
+       id="path985" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 104.69529,559.63396 c 2.06929,2.69029 4.13835,5.38029 6.20714,5.38081 2.06878,5.2e-4 4.13745,-2.6881 6.20618,-5.37679"
+       id="path1139"
+       inkscape:path-effect="#path-effect1141"
+       inkscape:original-d="m 104.69529,559.63396 c 2.06933,2.69026 4.1384,5.38025 6.2072,8.07 2.06901,-2.68845 4.13768,-5.37707 6.20612,-8.06598" />
+    <path
+       style="fill:url(#linearGradient1151);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0334613;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 36.246576,436.09346 c 0.29035,-1.35401 1.48198,-2.68281 4.52352,-5.04422 l 0.72925,-0.56619 2.25039,-0.60287 c 1.23769,-0.33158 2.27668,-0.61123 2.30886,-0.62144 0.0556,-0.0176 0.0585,0.34341 0.0585,7.28349 0,4.01613 -0.0114,7.30234 -0.0251,7.30268 -0.0138,2.7e-4 -1.05275,-0.27402 -2.30883,-0.6097 l -2.2838,-0.61035 -0.78981,-0.61396 c -2.44658,-1.90186 -3.60611,-3.06278 -4.15851,-4.1635 -0.3298,-0.65715 -0.4237,-1.19802 -0.30448,-1.75394 z"
+       id="path1143"
+       inkscape:export-filename="C:\Users\ricca\OneDrive\Progetti\Asteroids2.0\Assets\Sprite\Spaceship.png"
+       inkscape:export-xdpi="107.70354"
+       inkscape:export-ydpi="107.70354" />
+    <path
+       style="fill:url(#linearGradient1163);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0334613;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 129.7827,564.40652 c -0.24835,-0.0541 -0.57665,-0.1724 -0.82877,-0.29863 -1.1493,-0.57539 -2.32794,-1.75459 -4.30409,-4.30615 l -0.5175,-0.66818 -0.61027,-2.28298 c -0.33566,-1.25566 -0.60401,-2.28928 -0.59636,-2.29693 0.008,-0.008 3.29103,-0.01 7.29637,-0.006 l 7.28245,0.008 -0.55925,2.08804 c -0.30759,1.14842 -0.58457,2.18181 -0.61551,2.2964 -0.0501,0.18545 -0.12435,0.29575 -0.67495,1.00227 -2.28033,2.9261 -3.55668,4.08289 -4.87769,4.42073 -0.23805,0.0609 -0.7999,0.0849 -0.99443,0.0425 z"
+       id="path1155" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 73.174566,350.44954 v 69.53255"
+       id="path1204"
+       inkscape:export-filename="C:\Users\ricca\OneDrive\Progetti\Asteroids2.0\Assets\Sprite\Spaceship.png"
+       inkscape:export-xdpi="107.70354"
+       inkscape:export-ydpi="107.70354" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 81.382736,511.00656 -8.20817,11.31183"
+       id="path1236"
+       inkscape:export-filename="C:\Users\ricca\OneDrive\Progetti\Asteroids2.0\Assets\Sprite\Spaceship.png"
+       inkscape:export-xdpi="107.70354"
+       inkscape:export-ydpi="107.70354" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 175.13044,456.88232 81.382736,511.00657"
+       id="path1238"
+       inkscape:export-filename="C:\Users\ricca\OneDrive\Progetti\Asteroids2.0\Assets\Sprite\Spaceship.png"
+       inkscape:export-xdpi="107.70354"
+       inkscape:export-ydpi="107.70354" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 81.382736,362.16915 -8.20817,-11.71961"
+       id="path1240"
+       inkscape:export-filename="C:\Users\ricca\OneDrive\Progetti\Asteroids2.0\Assets\Sprite\Spaceship.png"
+       inkscape:export-xdpi="107.70354"
+       inkscape:export-ydpi="107.70354" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 175.04799,416.24632 81.382736,362.16915"
+       id="path1242"
+       inkscape:export-filename="C:\Users\ricca\OneDrive\Progetti\Asteroids2.0\Assets\Sprite\Spaceship.png"
+       inkscape:export-xdpi="107.70354"
+       inkscape:export-ydpi="107.70354" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 81.382736,362.16916 20.594984,35.67155 33.29303,8.92084"
+       id="path1246"
+       inkscape:export-filename="C:\Users\ricca\OneDrive\Progetti\Asteroids2.0\Assets\Sprite\Spaceship.png"
+       inkscape:export-xdpi="107.70354"
+       inkscape:export-ydpi="107.70354" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 81.382736,511.00657 20.594994,-35.67156 33.29302,-8.92083"
+       id="path1248"
+       inkscape:export-filename="C:\Users\ricca\OneDrive\Progetti\Asteroids2.0\Assets\Sprite\Spaceship.png"
+       inkscape:export-xdpi="107.70354"
+       inkscape:export-ydpi="107.70354" />
+    <path
+       style="fill:#66677b;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 60.736906,423.95329 -14.48755,3.88169 v 17.43314 l 14.21976,3.81008"
+       id="path1282"
+       inkscape:export-filename="C:\Users\ricca\OneDrive\Progetti\Asteroids2.0\Assets\Sprite\Spaceship.png"
+       inkscape:export-xdpi="107.70354"
+       inkscape:export-ydpi="107.70354" />
+    <path
+       id="path1284"
+       style="fill:#c8c8e0;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 60.469116,449.0782 12.70146,4.08144 m -29.8727,13.09634 17.17632,-17.17633 m -17.17632,17.17633 29.8727,-13.09634"
+       inkscape:export-filename="C:\Users\ricca\OneDrive\Progetti\Asteroids2.0\Assets\Sprite\Spaceship.png"
+       inkscape:export-xdpi="107.70354"
+       inkscape:export-ydpi="107.70354" />
+    <g
+       id="g1310"
+       style="fill:#c8c8e0;fill-opacity:1"
+       inkscape:export-filename="C:\Users\ricca\OneDrive\Progetti\Asteroids2.0\Assets\Sprite\Spaceship.png"
+       inkscape:export-xdpi="107.70354"
+       inkscape:export-ydpi="107.70354"
+       transform="rotate(90,131.72751,436.38397)">
+      <path
+         id="path1288"
+         style="fill:#c8c8e0;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 115.32563,494.93691 3.9712,12.43766 m -17.4423,17.4353 17.44064,-17.44064 m -17.44064,17.44064 13.4711,-29.87296" />
+    </g>
+  </g>
+</svg>
