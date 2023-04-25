@@ -9,6 +9,7 @@ public class ChangeScene : MonoBehaviour
 {
     public TMP_Text press_any_key;
     public EventSystem press_to_menu;
+    public GameObject sky;
 
     //the index of the scenes is setted in BuildSetting of the project
     //0 --> MainScene
@@ -54,7 +55,7 @@ public class ChangeScene : MonoBehaviour
                 break;
             case menu_state.ToMainMenu:
                 //move sky and change scene
-                if (transform.position.x > 0 && transform.position.y > 0)
+                if (sky.transform.position.x > 0 && sky.transform.position.y > 0)
                 {
                     SceneManager.LoadScene(1, LoadSceneMode.Additive);
                     state = menu_state.MainMenu;
@@ -62,18 +63,20 @@ public class ChangeScene : MonoBehaviour
                 }
                 else
                 {
-                    transform.Translate(0.1f, 0, 0);
-                    transform.Translate(0, 0.1f, 0);
+                    sky.transform.Translate(0.1f, 0, 0);
+                    sky.transform.Translate(0, 0.1f, 0);
                 }
                 break;
             case menu_state.ToGame:
-                if(transform.position.y < 260)
+                sky = FindObjectOfType<GameObject>().gameObject;
+                if(sky.transform.position.y < 15)
                 {
-                    transform.Translate(0, 0.1f, 0);
+                    sky.transform.Translate(0, 0.1f, 0);
                 }
                 else
                 {
-                    SceneManager.LoadScene(2);
+                    SceneManager.UnloadSceneAsync(1);
+                    SceneManager.LoadScene(2, LoadSceneMode.Additive);
                 }
                 break;
         }
