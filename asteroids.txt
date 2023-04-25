@@ -1,0 +1,14 @@
+asteroids:
+
+to do:
+
+sprite asteroids
+potenziamento navicella con due cannoni che sparano (uno per ala)
+ - tengo una navicella identica e gli modifico il figlio della pistola
+ - tango una navicella identica già impostata con 3 diversi punti di fuoco e utilizzo quello che mi interessa
+main emnu interattivo
+sfondo più interattivo (movimwnto background casuale, etc...)
+power-ups
+diversi modelli di navicella
+ufo enemy
+transizione scena main menu - new game (scena base vuota --> carico main menu --> sposto telecamera realtime --> rimuovo scena main menu --> carico scena new games Desktop\Menu_Game_scene_transition.png

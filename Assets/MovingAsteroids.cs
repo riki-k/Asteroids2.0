@@ -67,8 +67,9 @@ public class MovingAsteroids : MonoBehaviour
         if (collision.gameObject.CompareTag("Projectile"))
         {
             Destroy(gameObject);
-            //asteroids_counter--;
+
             FindObjectOfType<SpawnManager>().asteroids_counter--;
+            Hud.hud.point += 100;
         }
     }
 
