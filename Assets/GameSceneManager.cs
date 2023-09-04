@@ -5,19 +5,23 @@ using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public class ChangeScene : MonoBehaviour
+public class GameSceneManager : MonoBehaviour
 {
+    public TMP_Text title;
     public TMP_Text press_any_key;
     public EventSystem press_to_menu;
     public GameObject sky;
 
+    private Scene load;
     //the index of the scenes is setted in BuildSetting of the project
     //0 --> MainScene
-    //1 --> MainMennu
-    //2 --> GameScene
+    //1 --> Title Scene
+    //2 --> MainMennu
+    //3 --> GameScene
 
-    bool space_pressed = false;
+    //bool space_pressed = false;
 
+    /*
     public enum menu_state
     {
         Title,
@@ -26,7 +30,7 @@ public class ChangeScene : MonoBehaviour
         ToGame
     }
 
-    public menu_state state;
+    public menu_state state;*/
 
     // Start is called before the first frame update
     void Start()
@@ -37,9 +41,24 @@ public class ChangeScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        switch (FSM.fsm.state)
+        {
+            case FSM.gamestate.title :
+                load = SceneManager.GetSceneByName("Title");
+                if (load.name == null)
+                    SceneManager.LoadScene(1, LoadSceneMode.Additive);
+                break;
+            case FSM.gamestate.menu :
+                load = SceneManager.GetSceneByName("MainMenu");
+                if (load.name == null)
+                    if(Main.main.camera_menu_position)
+                        SceneManager.LoadScene(2, LoadSceneMode.Additive);
+                break;
+        }
         //inibire tasto space
         //finche non finita transazione "camera" non cambio scena
 
+        /*
         switch (state)
         {
             case menu_state.Title:
@@ -75,17 +94,18 @@ public class ChangeScene : MonoBehaviour
                 }
                 else
                 {
+                    //title.text = "";
                     SceneManager.UnloadSceneAsync(1);
                     SceneManager.LoadScene(2, LoadSceneMode.Additive);
                 }
                 break;
         }
-
+        */
     }
 
     public void LoadNewgame()
     {
-        state = menu_state.ToGame;
+        //state = menu_state.ToGame;
     }
 
     public void QuitGame()
