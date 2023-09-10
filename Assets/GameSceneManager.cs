@@ -52,60 +52,25 @@ public class GameSceneManager : MonoBehaviour
                 load = SceneManager.GetSceneByName("MainMenu");
                 if (load.name == null)
                     if(Main.main.camera_menu_position)
-                        SceneManager.LoadScene(2, LoadSceneMode.Additive);
-                break;
-        }
-        //inibire tasto space
-        //finche non finita transazione "camera" non cambio scena
-
-        /*
-        switch (state)
-        {
-            case menu_state.Title:
-                if (!space_pressed)
-                {
-                    if (Input.GetKeyDown(KeyCode.Space))
                     {
-                        press_any_key.text = "";
-                        press_to_menu.GetComponent<EventSystem>().enabled = false;
-                        state = menu_state.ToMainMenu;
-                    }
-                }
+                        SceneManager.LoadScene(2, LoadSceneMode.Additive);
+                        SceneManager.UnloadSceneAsync(1);
+                    }        
                 break;
-            case menu_state.ToMainMenu:
-                //move sky and change scene
-                if (sky.transform.position.x > 0 && sky.transform.position.y > 0)
+            case FSM.gamestate.play :
+                load = SceneManager.GetSceneByName("NewGameScene");
+                if (load.name == null)
                 {
-                    SceneManager.LoadScene(1, LoadSceneMode.Additive);
-                    state = menu_state.MainMenu;
-                    break;
-                }
-                else
-                {
-                    sky.transform.Translate(0.1f, 0, 0);
-                    sky.transform.Translate(0, 0.1f, 0);
-                }
-                break;
-            case menu_state.ToGame:
-                sky = FindObjectOfType<GameObject>().gameObject;
-                if(sky.transform.position.y < 15)
-                {
-                    sky.transform.Translate(0, 0.1f, 0);
-                }
-                else
-                {
-                    //title.text = "";
-                    SceneManager.UnloadSceneAsync(1);
-                    SceneManager.LoadScene(2, LoadSceneMode.Additive);
+                    SceneManager.LoadScene(3, LoadSceneMode.Additive);
+                    SceneManager.UnloadSceneAsync(2);
                 }
                 break;
         }
-        */
     }
 
     public void LoadNewgame()
     {
-        //state = menu_state.ToGame;
+        FSM.fsm.state = FSM.gamestate.play;
     }
 
     public void QuitGame()

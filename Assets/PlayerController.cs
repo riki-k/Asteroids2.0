@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
             teleport();
         }
 
-        toroidal_space();
+        //toroidal_space();
     }
 
     void toroidal_space()

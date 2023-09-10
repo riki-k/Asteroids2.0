@@ -19,6 +19,9 @@ public class Main : MonoBehaviour
         main = this;
         camera_menu_position = false;
         camera_game_position = false;
+
+        Debug.Log(Main.main.gameCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Main.main.gameCamera.transform.position.z)));
+
     }
 
     // Update is called once per frame
@@ -32,18 +35,18 @@ public class Main : MonoBehaviour
                 cameraMovement();
                 break;
             case FSM.gamestate.play:
-                Event.enabled = true;
+                //Event.enabled = true;
                 break;
         }
     }
 
     void cameraMovement()
     {
-        if (gameCamera.transform.position.x > -25 || gameCamera.transform.position.y > -15)
+        if (gameCamera.transform.position.x > -25 || gameCamera.transform.position.y > -25)
         {
-            if (gameCamera.transform.position.x != -25)
+            if (gameCamera.transform.position.x > -25)
                 gameCamera.transform.Translate(-0.1f, 0, 0);
-            if (gameCamera.transform.position.y != -15)
+            if (gameCamera.transform.position.y >-25)
                 gameCamera.transform.Translate(0, -0.1f, 0);
         }
         else
