@@ -5,10 +5,9 @@ using UnityEngine;
 public class MovingAsteroids : MonoBehaviour
 {
     private float speed;
-    private bool move;
     public int asteroids_counter;
-
-    private Rigidbody2D body2d;
+    private float half_x_size_camera;
+    private float half_y_size_camera;
 
     Vector3 borders;
 
@@ -16,55 +15,23 @@ public class MovingAsteroids : MonoBehaviour
     void Start()
     {
         borders = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-        speed = 100;
-
-        body2d = GetComponent<Rigidbody2D>();
-
-        body2d.AddForce(transform.forward * Time.deltaTime * speed, ForceMode2D.Impulse);
-        
-        move = true;
+        half_x_size_camera = (Main.main.gameCamera.transform.position.x - borders.x);
+        half_y_size_camera = (Main.main.gameCamera.transform.position.y - borders.y);
+        speed = Random.Range(5, 10);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.forward * Time.deltaTime * speed;
-        /*
-        if (move)
+        transform.Translate(Vector3.right * Time.deltaTime * speed);
+
+        if ((transform.position.x + 10) < (Main.main.gameCamera.transform.position.x + half_x_size_camera) || 
+            (transform.position.x - 10) > borders.x || 
+            (transform.position.y - 10) > borders.y || 
+            (transform.position.y + 10) < (Main.main.gameCamera.transform.position.y + half_y_size_camera))
         {
-            body2d.AddForce(new Vector3(1, transform.position.y, transform.position.z) * Time.deltaTime * speed, ForceMode2D.Impulse);
-            move = false;
-        }
-        
-        if ((body2d.velocity.x > 10 && body2d.velocity.x < -10) || (body2d.velocity.y > 10 && body2d.velocity.y < -10)) {
-            Destroy(this);
-        }
-        */
-
-
-        //toroidalSpace();
-    }
-
-    void toroidalSpace()
-    {
-        if (transform.position.x < -borders.x - 5)
-        {
-            transform.position = new Vector3(borders.x + 2, transform.position.y, transform.position.z);
-        }
-
-        if (transform.position.x > borders.x + 5)
-        {
-            transform.position = new Vector3(-borders.x - 2, transform.position.y, transform.position.z);
-        }
-
-        if (transform.position.y < -borders.y - 5)
-        {
-            transform.position = new Vector3(transform.position.x, borders.y + 2, transform.position.z);
-        }
-
-        if (transform.position.y > borders.y + 5)
-        {
-            transform.position = new Vector3(transform.position.x, -borders.y - 2, transform.position.z);
+            Destroy(gameObject);
+            FindObjectOfType<SpawnManager>().asteroids_counter--;
         }
     }
 

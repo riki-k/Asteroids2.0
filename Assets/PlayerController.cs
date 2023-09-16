@@ -9,8 +9,13 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D playerRb2;
     private SpriteRenderer playersprite;
+    Vector3 borders;
     private float rotation_dir;
     private float rotation_speed;
+    private float half_x_size_camera;
+    private float half_y_size_camera;
+    private float x_left_borders;
+    private float y_bottom_borders;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +35,13 @@ public class PlayerController : MonoBehaviour
         }
 
         //if the texture is player rectangle least the transform scale
+
+
+        borders = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+        half_x_size_camera = (Main.main.gameCamera.transform.position.x - borders.x);
+        half_y_size_camera = (Main.main.gameCamera.transform.position.y - borders.y);
+        x_left_borders = Main.main.gameCamera.transform.position.x + half_x_size_camera;
+        y_bottom_borders = Main.main.gameCamera.transform.position.y + half_y_size_camera;
     }
 
     // Update is called once per frame
@@ -76,32 +88,31 @@ public class PlayerController : MonoBehaviour
             teleport();
         }
 
-        //toroidal_space();
+        toroidal_space();
     }
 
     void toroidal_space()
     {
-        Vector3 borders = Camera.main.ScreenToWorldPoint(new Vector3( Screen.width, Screen.height, 0));
-
-        if (transform.position.x < -borders.x)
+        if (transform.position.x + (playersprite.size.x / 2) < x_left_borders)
         {
-            transform.position = new Vector3(borders.x, transform.position.y, transform.position.z);
+            transform.position = new Vector3(borders.x + (playersprite.size.x / 2), transform.position.y, transform.position.z);
         }
 
-        if (transform.position.x > borders.x)
+        if (transform.position.x - (playersprite.size.x / 2) > borders.x)
         {
-            transform.position = new Vector3(-borders.x, transform.position.y, transform.position.z);
-        }
+            transform.position = new Vector3(x_left_borders - (playersprite.size.x / 2), transform.position.y, transform.position.z);
+        }  
 
-        if (transform.position.y > borders.y)
+        if (transform.position.y - (playersprite.size.x / 2) > borders.y)
         {
-            transform.position = new Vector3(transform.position.x, -borders.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x, y_bottom_borders - (playersprite.size.x / 2), transform.position.z);
         }
-
-        if (transform.position.y < -borders.y)
+        
+        if (transform.position.y + (playersprite.size.x / 2) < y_bottom_borders)
         {
-            transform.position = new Vector3(transform.position.x, borders.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x, borders.y + (playersprite.size.x / 2), transform.position.z);
         }
+        
     }
 
     void teleport()
