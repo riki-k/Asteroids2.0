@@ -20,12 +20,16 @@ public class MovingAsteroids : MonoBehaviour
 
         body2d = GetComponent<Rigidbody2D>();
 
+        body2d.AddForce(transform.forward * Time.deltaTime * speed, ForceMode2D.Impulse);
+        
         move = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        transform.position += transform.forward * Time.deltaTime * speed;
+        /*
         if (move)
         {
             body2d.AddForce(new Vector3(1, transform.position.y, transform.position.z) * Time.deltaTime * speed, ForceMode2D.Impulse);
@@ -35,8 +39,10 @@ public class MovingAsteroids : MonoBehaviour
         if ((body2d.velocity.x > 10 && body2d.velocity.x < -10) || (body2d.velocity.y > 10 && body2d.velocity.y < -10)) {
             Destroy(this);
         }
+        */
 
-        toroidalSpace();
+
+        //toroidalSpace();
     }
 
     void toroidalSpace()

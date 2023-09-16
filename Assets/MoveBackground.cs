@@ -12,9 +12,7 @@ public class MoveBackground : MonoBehaviour
 
     private float switch_x_coordinate;
     private float offset;
-    private float width;
     private float highest_x;
-    private Vector3 initial_pos;
     public int background_num = 3;
     public GameObject [] righterSprite;
     public Vector3 borders;

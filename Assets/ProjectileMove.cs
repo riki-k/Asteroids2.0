@@ -5,11 +5,17 @@ using UnityEngine;
 public class ProjectileMove : MonoBehaviour
 {
     private float speed;
+    private float half_x_size_camera;
+    private float half_y_size_camera;
+    public Vector3 borders;
 
     // Start is called before the first frame update
     void Start()
     {
         speed = 10;
+        borders = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+        half_x_size_camera = (Main.main.gameCamera.transform.position.x - borders.x);
+        half_y_size_camera = (Main.main.gameCamera.transform.position.y - borders.y);
     }
 
     // Update is called once per frame
@@ -21,27 +27,11 @@ public class ProjectileMove : MonoBehaviour
 
     void destroyOutLimits()
     {
-        Vector3 borders = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-
-        if (transform.position.x < -borders.x)
+        if (transform.position.x < (Main.main.gameCamera.transform.position.x + half_x_size_camera) || transform.position.x > borders.x || transform.position.y > borders.y || transform.position.y < (Main.main.gameCamera.transform.position.y + half_y_size_camera))
         {
             Destroy(gameObject);
         }
 
-        if (transform.position.x > borders.x)
-        {
-            Destroy(gameObject);
-        }
-
-        if (transform.position.y > borders.y)
-        {
-            Destroy(gameObject);
-        }
-
-        if (transform.position.y < -borders.y)
-        {
-            Destroy(gameObject);
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
