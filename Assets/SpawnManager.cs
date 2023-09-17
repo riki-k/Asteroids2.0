@@ -69,7 +69,7 @@ public class SpawnManager : MonoBehaviour
                     lookDirection = new Vector3(0, 0, Random.Range(-150, -210));
                 }
             }
-            /*
+            
             else if (spawnAxisPosition == 1)
             {
                 if (spawnExtremePosition == 0)
@@ -83,7 +83,6 @@ public class SpawnManager : MonoBehaviour
                     lookDirection = new Vector3(0, 0, Random.Range(-10, -170));
                 }
             }
-            */
 
             Quaternion direction = new Quaternion(0,0,0,0);
             direction.eulerAngles = lookDirection;

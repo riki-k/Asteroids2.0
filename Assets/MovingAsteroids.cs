@@ -10,8 +10,10 @@ public class MovingAsteroids : MonoBehaviour
     private float half_y_size_camera;
     private float x_left_borders;
     private float y_bottom_borders;
+    private bool destroy_anim;
 
     private SpriteRenderer playersprite;
+    private Animation destroyAnimation;
 
     Vector3 borders;
 
@@ -24,7 +26,9 @@ public class MovingAsteroids : MonoBehaviour
         x_left_borders = Main.main.gameCamera.transform.position.x + half_x_size_camera;
         y_bottom_borders = Main.main.gameCamera.transform.position.y + half_y_size_camera;
         playersprite = GetComponent<SpriteRenderer>();
+        destroyAnimation = GetComponent<Animation>();
         speed = Random.Range(5, 10);
+        destroy_anim = false;
     }
 
     // Update is called once per frame
@@ -32,6 +36,7 @@ public class MovingAsteroids : MonoBehaviour
     {
         transform.Translate(Vector3.right * Time.deltaTime * speed);
         toroidal_space();
+        //destroyOnEndAnimation();
     }
 
     void toroidal_space()
@@ -62,10 +67,28 @@ public class MovingAsteroids : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Projectile"))
         {
-            Destroy(gameObject);
-
+            //destroy_anim = true;
+            destroyAnimation.Play();
             FindObjectOfType<SpawnManager>().asteroids_counter--;
             Hud.hud.point += 100;
+        }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+
+        }
+    }
+
+    private void destroyOnEndAnimation()
+    {
+        if (destroy_anim)
+        {
+            destroyAnimation.Play();
+            if (!destroyAnimation.isPlaying)
+            {
+                Destroy(gameObject);
+                destroy_anim = false;
+            }
         }
     }
 
