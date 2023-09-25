@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 8022980740823611828}
   - component: {fileID: 3765019715785351287}
   - component: {fileID: 2631660241977743496}
-  - component: {fileID: 721444081453689242}
-  - component: {fileID: 860403155901029718}
+  - component: {fileID: 1889192857294998745}
   m_Layer: 7
   m_Name: Asteroids
   m_TagString: Asteroids
@@ -139,7 +138,7 @@ CircleCollider2D:
   m_Offset: {x: -0.006077856, y: -0.007597327}
   serializedVersion: 2
   m_Radius: 0.19586018
---- !u!95 &721444081453689242
+--- !u!95 &1889192857294998745
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -149,7 +148,7 @@ Animator:
   m_GameObject: {fileID: 2043537627734151035}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f6e95a5fddaa0fe4fa66bc8eee95e51b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 40899062e676fd84d9101e5bf6a4a0eb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -159,20 +158,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &860403155901029718
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043537627734151035}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 7d18ff6f4cd32234e82470de40ef064b, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 7d18ff6f4cd32234e82470de40ef064b, type: 2}
-  - {fileID: 7400000, guid: 7d18ff6f4cd32234e82470de40ef064b, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0

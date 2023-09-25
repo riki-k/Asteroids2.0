@@ -131,19 +131,19 @@ TextureImporter:
       name: Asteroid 01 - Explode_0
       rect:
         serializedVersion: 2
-        x: 539
-        y: 74
-        width: 7
-        height: 14
+        x: 0
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f6c2a91a23de2c42b10695ac619f42b
-      internalID: 604992771
+      spriteID: ea2e81a1559ae494987d1e2f6a7cf6e1
+      internalID: 1725254768
       vertices: []
       indices: 
       edges: []
@@ -152,19 +152,19 @@ TextureImporter:
       name: Asteroid 01 - Explode_1
       rect:
         serializedVersion: 2
-        x: 580
-        y: 80
-        width: 5
-        height: 5
+        x: 96
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ce7bad8207bbac4ca23cf98be0e9bf5
-      internalID: -443881919
+      spriteID: 7669c4dca5cc3ec46a5aa7dca3a960c7
+      internalID: -349070731
       vertices: []
       indices: 
       edges: []
@@ -173,19 +173,19 @@ TextureImporter:
       name: Asteroid 01 - Explode_2
       rect:
         serializedVersion: 2
-        x: 641
-        y: 84
-        width: 4
-        height: 9
+        x: 192
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd20fb7a98d9a294f8eba35b2193ca9c
-      internalID: 351012587
+      spriteID: d6b8b514bdce97a46890efa37511fcae
+      internalID: 78206315
       vertices: []
       indices: 
       edges: []
@@ -194,19 +194,19 @@ TextureImporter:
       name: Asteroid 01 - Explode_3
       rect:
         serializedVersion: 2
-        x: 334
-        y: 48
-        width: 15
-        height: 25
+        x: 288
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62ddcaf0f3e142a4fa74458e720094ef
-      internalID: 1514149421
+      spriteID: dd290979d5e95fc44ad56bb04491a381
+      internalID: 1028810036
       vertices: []
       indices: 
       edges: []
@@ -215,19 +215,19 @@ TextureImporter:
       name: Asteroid 01 - Explode_4
       rect:
         serializedVersion: 2
-        x: 397
-        y: 57
-        width: 10
-        height: 18
+        x: 384
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 204c7558f5b10364e80fc667a97dcf8e
-      internalID: 910942041
+      spriteID: 13adad8c37a3f4848b666540cc9e163d
+      internalID: 1029337338
       vertices: []
       indices: 
       edges: []
@@ -236,19 +236,19 @@ TextureImporter:
       name: Asteroid 01 - Explode_5
       rect:
         serializedVersion: 2
-        x: 435
-        y: 64
-        width: 14
-        height: 19
+        x: 480
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92f055ac5f643064e8e589357e27d2a5
-      internalID: -49612175
+      spriteID: ffb419eecec9f774ebd781ef5210b426
+      internalID: 311651308
       vertices: []
       indices: 
       edges: []
@@ -257,19 +257,19 @@ TextureImporter:
       name: Asteroid 01 - Explode_6
       rect:
         serializedVersion: 2
-        x: 480
+        x: 576
         y: 0
         width: 96
         height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e39e141eb16a6224bbe30e95f373bb70
-      internalID: 1445893253
+      spriteID: 53b5ceef543498e45b57c2a75fc62cba
+      internalID: 195578216
       vertices: []
       indices: 
       edges: []
@@ -278,460 +278,19 @@ TextureImporter:
       name: Asteroid 01 - Explode_7
       rect:
         serializedVersion: 2
-        x: 665
-        y: 66
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b06da516d64c4bc489162d97ad950eb2
-      internalID: 698305312
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_8
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 672
         y: 0
         width: 96
         height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 135ad5c45066887408c6bd15398b279d
-      internalID: 991675307
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_9
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: adbe2006c7b9df54292997bb4a727557
-      internalID: 671087504
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_10
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5928783bc2097de4989e047eda4644f9
-      internalID: 1444357757
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_11
-      rect:
-        serializedVersion: 2
-        x: 306
-        y: 50
-        width: 16
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dae00ae7cb4e6174d99be280ca2cd57f
-      internalID: -1445923376
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_12
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f90ca0d73c75ec4fb04f5c6875e5fff
-      internalID: -1922651039
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_13
-      rect:
-        serializedVersion: 2
-        x: 447
-        y: 46
-        width: 24
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b7b81a5e5fe1eb47a2aee418fedb440
-      internalID: -948622931
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_14
-      rect:
-        serializedVersion: 2
-        x: 561
-        y: 60
-        width: 12
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc759c5357025e446988fdf7302d3be1
-      internalID: 463823179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_15
-      rect:
-        serializedVersion: 2
-        x: 303
-        y: 29
-        width: 15
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e1d8d141cfd78d48980c78d47a8f01f
-      internalID: 1649473405
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_16
-      rect:
-        serializedVersion: 2
-        x: 327
-        y: 28
-        width: 9
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9812a026ba83d9243b89144ec9210eeb
-      internalID: -779104659
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_17
-      rect:
-        serializedVersion: 2
-        x: 344
-        y: 19
-        width: 22
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48f9993b87f69d04290e14c8b179b947
-      internalID: -86274963
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_18
-      rect:
-        serializedVersion: 2
-        x: 393
-        y: 25
-        width: 19
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fec3cf7e1130a074fae2223d8f3400d7
-      internalID: -110156519
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_19
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf0e6ce2c2e28384e84830bdd0fcda9a
-      internalID: 212566811
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_20
-      rect:
-        serializedVersion: 2
-        x: 484
-        y: 23
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1807200023118e240a2015bed4fb683c
-      internalID: -474186182
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_21
-      rect:
-        serializedVersion: 2
-        x: 319
-        y: 13
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9182760086bbb7c46b370c43fd68643c
-      internalID: 1530963884
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_22
-      rect:
-        serializedVersion: 2
-        x: 449
-        y: 12
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15077c7934205f648a704936c8ed3411
-      internalID: 570139546
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_23
-      rect:
-        serializedVersion: 2
-        x: 511
-        y: 20
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1bc8b7031af8967469d26f885a876d48
-      internalID: 215317463
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_24
-      rect:
-        serializedVersion: 2
-        x: 578
-        y: 21
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 436cd8f8dd874334eaac115534c3e000
-      internalID: 9282636
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_25
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eea57c1fd06f73f4daa3dde32301dde5
-      internalID: 1031880952
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_26
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 2
-        width: 7
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd91f987b2b3e044fa795621d349cb5a
-      internalID: 1421428697
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_27
-      rect:
-        serializedVersion: 2
-        x: 554
-        y: 9
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89b34ac77d9c84d44bdef6dd72de8156
-      internalID: -188801780
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asteroid 01 - Explode_28
-      rect:
-        serializedVersion: 2
-        x: 597
-        y: 0
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7744c34b43c3bb4b80603d9f0cf0c25
-      internalID: -1727950366
+      spriteID: 9009f49f6b14f46408311b1f6d27637f
+      internalID: 1897737581
       vertices: []
       indices: 
       edges: []
@@ -747,35 +306,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Asteroid 01 - Explode_3: 1514149421
-      Asteroid 01 - Explode_8: 991675307
-      Asteroid 01 - Explode_20: -474186182
-      Asteroid 01 - Explode_23: 215317463
-      Asteroid 01 - Explode_2: 351012587
-      Asteroid 01 - Explode_7: 698305312
-      Asteroid 01 - Explode_12: -1922651039
-      Asteroid 01 - Explode_4: 910942041
-      Asteroid 01 - Explode_28: -1727950366
-      Asteroid 01 - Explode_25: 1031880952
-      Asteroid 01 - Explode_6: 1445893253
-      Asteroid 01 - Explode_24: 9282636
-      Asteroid 01 - Explode_0: 604992771
-      Asteroid 01 - Explode_26: 1421428697
-      Asteroid 01 - Explode_9: 671087504
-      Asteroid 01 - Explode_11: -1445923376
-      Asteroid 01 - Explode_21: 1530963884
-      Asteroid 01 - Explode_19: 212566811
-      Asteroid 01 - Explode_10: 1444357757
-      Asteroid 01 - Explode_27: -188801780
-      Asteroid 01 - Explode_1: -443881919
-      Asteroid 01 - Explode_16: -779104659
-      Asteroid 01 - Explode_15: 1649473405
-      Asteroid 01 - Explode_13: -948622931
-      Asteroid 01 - Explode_5: -49612175
-      Asteroid 01 - Explode_14: 463823179
-      Asteroid 01 - Explode_18: -110156519
-      Asteroid 01 - Explode_22: 570139546
-      Asteroid 01 - Explode_17: -86274963
+      Asteroid 01 - Explode_3: 1028810036
+      Asteroid 01 - Explode_2: 78206315
+      Asteroid 01 - Explode_7: 1897737581
+      Asteroid 01 - Explode_4: 1029337338
+      Asteroid 01 - Explode_6: 195578216
+      Asteroid 01 - Explode_0: 1725254768
+      Asteroid 01 - Explode_1: -349070731
+      Asteroid 01 - Explode_5: 311651308
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
