@@ -99,8 +99,6 @@ public class PlayerController : MonoBehaviour
         if (FSM.fsm.state == FSM.gamestate.dead)
             if (Input.GetKey(KeyCode.R))
                 resetAll();
-        else
-            myAnim.Play("Idle");
 
         toroidal_space();
     }
@@ -137,6 +135,9 @@ public class PlayerController : MonoBehaviour
     void resetAll()
     {  
         FSM.fsm.state = FSM.gamestate.play;
+        playerRb2.velocity = Vector2.zero;
+        playerRb2.angularVelocity = 0;
+        transform.position = initialPosition;
         myAnim.Play("Idle");
     }
 
