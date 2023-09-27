@@ -34,6 +34,7 @@ public class MovingAsteroids : MonoBehaviour
     {
         transform.Translate(Vector3.right * Time.deltaTime * speed);
         toroidal_space();
+        destroyOnPlayerDead();
     }
 
     void toroidal_space()
@@ -58,6 +59,15 @@ public class MovingAsteroids : MonoBehaviour
             transform.position = new Vector3(transform.position.x, borders.y + (playersprite.size.x / 2), transform.position.z);
         }
 
+    }
+
+    void destroyOnPlayerDead()
+    {
+        if (FSM.fsm.state == FSM.gamestate.dead)
+        {
+            myAnim.Play("Destroy");
+            Destroy(gameObject, 1);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

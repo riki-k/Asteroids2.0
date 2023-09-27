@@ -14,6 +14,7 @@ public class Hud : MonoBehaviour
 
     public TMP_Text times;
     public TMP_Text points;
+    public TMP_Text pressToRestart;
 
     public int point;
 
@@ -23,6 +24,7 @@ public class Hud : MonoBehaviour
     {
         hud = this;
         point = 0;
+        pressToRestart.enabled = false;
     }
 
     // Update is called once per frame
@@ -30,5 +32,14 @@ public class Hud : MonoBehaviour
     {
         times.text = Time.realtimeSinceStartup.ToString();
         points.text = point.ToString();
+        switch(FSM.fsm.state)
+        {
+            case FSM.gamestate.play :
+                pressToRestart.enabled = false;
+                break;
+            case FSM.gamestate.dead:
+                pressToRestart.enabled = true;
+                break;
+        }
     }
 }

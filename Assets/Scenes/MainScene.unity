@@ -237,10 +237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277233fa6e1510446a3fb0bd486200d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: {fileID: 0}
-  press_any_key: {fileID: 0}
-  press_to_menu: {fileID: 0}
-  sky: {fileID: 0}
 --- !u!114 &221470856
 MonoBehaviour:
   m_ObjectHideFlags: 0

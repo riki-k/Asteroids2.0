@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRb2;
     private SpriteRenderer playersprite;
     Vector3 borders;
-    Vector3 initialPosition;
+    public Vector3 initialPosition;
     private float rotation_dir;
     private float rotation_speed;
     private float half_x_size_camera;
@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             playerRb2.AddForce(transform.right, ForceMode2D.Impulse);
+            myAnim.Play("Move");
         }
 
         //right rotation
@@ -63,6 +64,7 @@ public class PlayerController : MonoBehaviour
         {
             rotation_dir = 0.1f * rotation_speed * Time.deltaTime;
             playerRb2.AddTorque(rotation_dir, ForceMode2D.Impulse);
+            //myAnim.Play("Move");
         }
 
         //left rotation
@@ -70,6 +72,7 @@ public class PlayerController : MonoBehaviour
         {
             rotation_dir = -0.1f * rotation_speed * Time.deltaTime;
             playerRb2.AddTorque(rotation_dir, ForceMode2D.Impulse);
+            //myAnim.Play("Move");
         }
 
         //shoot
@@ -93,10 +96,11 @@ public class PlayerController : MonoBehaviour
         }
 
         //restart after dead
-        if (Input.GetKey(KeyCode.Space))
-        {
-            resetAll();
-        }
+        if (FSM.fsm.state == FSM.gamestate.dead)
+            if (Input.GetKey(KeyCode.R))
+                resetAll();
+        else
+            myAnim.Play("Idle");
 
         toroidal_space();
     }
@@ -131,8 +135,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void resetAll()
-    {
-        transform.position = initialPosition;
+    {  
         FSM.fsm.state = FSM.gamestate.play;
         myAnim.Play("Idle");
     }
