@@ -40,56 +40,60 @@ public class SpawnManager : MonoBehaviour
     //manage the spawn position and direction of the asteroids
     void spawnAsteroids()
     {
-        if (asteroids_counter < 12)
+        if(!(FSM.fsm.state == FSM.gamestate.dead))
         {
-            Vector3 spawnPosition = new Vector3(0, 0, 0);
-
-            float left_x_pos= Random.Range(x_left_borders -5, x_left_borders);
-            float right_x_pos = Random.Range(borders.x, borders.x + 5);
-
-            float bottom_y_pos = Random.Range(y_bottom_borders - 5, y_bottom_borders);
-            float top_y_pos = Random.Range(borders.y, borders.y + 5);
-
-            int spawnAxisPosition = Random.Range(0, 2);
-            int spawnExtremePosition = Random.Range(0, 2);
-
-            spawnPosition = new Vector3(left_x_pos, Random.Range(y_bottom_borders, borders.y), 0);
-            
-            //spawnAxisPosition = 0 --> horizontal Axis
-            if (spawnAxisPosition == 0)
+            if (asteroids_counter < 12)
             {
-                if (spawnExtremePosition == 0)
-                {
-                    spawnPosition = new Vector3(left_x_pos, Random.Range(y_bottom_borders, borders.y), 0);
-                    lookDirection = new Vector3(0, 0, Random.Range(-30, 30));
-                }
-                else if (spawnExtremePosition == 1)
-                {
-                    spawnPosition = new Vector3(right_x_pos, Random.Range(y_bottom_borders, borders.y), 0);
-                    lookDirection = new Vector3(0, 0, Random.Range(-150, -210));
-                }
-            }
-            
-            else if (spawnAxisPosition == 1)
-            {
-                if (spawnExtremePosition == 0)
-                {
-                    spawnPosition = new Vector3(Random.Range(left_x_pos, borders.x), bottom_y_pos, 0);
-                    lookDirection = new Vector3(0, 0, Random.Range(10, 170));
-                }
-                else if (spawnExtremePosition == 1)
-                {
-                    spawnPosition = new Vector3(Random.Range(left_x_pos, borders.x), top_y_pos, 0);
-                    lookDirection = new Vector3(0, 0, Random.Range(-10, -170));
-                }
-            }
+                Vector3 spawnPosition = new Vector3(0, 0, 0);
 
-            Quaternion direction = new Quaternion(0,0,0,0);
-            direction.eulerAngles = lookDirection;
+                float left_x_pos = Random.Range(x_left_borders - 5, x_left_borders);
+                float right_x_pos = Random.Range(borders.x, borders.x + 5);
 
-            //Instantiate(asteroids, spawnPosition, direction);
-            Instantiate(asteroids, spawnPosition, direction, this.transform);
-            asteroids_counter++;
+                float bottom_y_pos = Random.Range(y_bottom_borders - 5, y_bottom_borders);
+                float top_y_pos = Random.Range(borders.y, borders.y + 5);
+
+                int spawnAxisPosition = Random.Range(0, 2);
+                int spawnExtremePosition = Random.Range(0, 2);
+
+                spawnPosition = new Vector3(left_x_pos, Random.Range(y_bottom_borders, borders.y), 0);
+
+                //spawnAxisPosition = 0 --> horizontal Axis
+                if (spawnAxisPosition == 0)
+                {
+                    if (spawnExtremePosition == 0)
+                    {
+                        spawnPosition = new Vector3(left_x_pos, Random.Range(y_bottom_borders, borders.y), 0);
+                        lookDirection = new Vector3(0, 0, Random.Range(-30, 30));
+                    }
+                    else if (spawnExtremePosition == 1)
+                    {
+                        spawnPosition = new Vector3(right_x_pos, Random.Range(y_bottom_borders, borders.y), 0);
+                        lookDirection = new Vector3(0, 0, Random.Range(-150, -210));
+                    }
+                }
+
+                else if (spawnAxisPosition == 1)
+                {
+                    if (spawnExtremePosition == 0)
+                    {
+                        spawnPosition = new Vector3(Random.Range(left_x_pos, borders.x), bottom_y_pos, 0);
+                        lookDirection = new Vector3(0, 0, Random.Range(10, 170));
+                    }
+                    else if (spawnExtremePosition == 1)
+                    {
+                        spawnPosition = new Vector3(Random.Range(left_x_pos, borders.x), top_y_pos, 0);
+                        lookDirection = new Vector3(0, 0, Random.Range(-10, -170));
+                    }
+                }
+
+                Quaternion direction = new Quaternion(0, 0, 0, 0);
+                direction.eulerAngles = lookDirection;
+
+                //Instantiate(asteroids, spawnPosition, direction);
+                Instantiate(asteroids, spawnPosition, direction, this.transform);
+                asteroids_counter++;
+            }
         }
+        
     }
 }

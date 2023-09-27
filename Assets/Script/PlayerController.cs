@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRb2;
     private SpriteRenderer playersprite;
     Vector3 borders;
+    Vector3 initialPosition;
     private float rotation_dir;
     private float rotation_speed;
     private float half_x_size_camera;
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour
         myAnim = GetComponent<Animator>();
         rotation_dir = 0;
         rotation_speed = 5;
+        initialPosition = transform.position;
 
         //adjust the scale and the rotation speed based on texture
         //if the texture is spaceship.png
@@ -90,6 +92,12 @@ public class PlayerController : MonoBehaviour
             teleport();
         }
 
+        //restart after dead
+        if (Input.GetKey(KeyCode.Space))
+        {
+            resetAll();
+        }
+
         toroidal_space();
     }
 
@@ -122,14 +130,20 @@ public class PlayerController : MonoBehaviour
         transform.position = new Vector3(Random.Range(10, Screen.width), Random.Range(10, Screen.height - 10), -1);
     }
 
+    void resetAll()
+    {
+        transform.position = initialPosition;
+        FSM.fsm.state = FSM.gamestate.play;
+        myAnim.Play("Idle");
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Asteroids"))
         {
             //remove life
             myAnim.Play("Destroy");
-            Destroy(gameObject, 1);
-            
+            FSM.fsm.state = FSM.gamestate.dead;
         }
     }
 

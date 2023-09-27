@@ -7,30 +7,7 @@ using TMPro;
 
 public class GameSceneManager : MonoBehaviour
 {
-    public TMP_Text title;
-    public TMP_Text press_any_key;
-    public EventSystem press_to_menu;
-    public GameObject sky;
-
     private Scene load;
-    //the index of the scenes is setted in BuildSetting of the project
-    //0 --> MainScene
-    //1 --> Title Scene
-    //2 --> MainMennu
-    //3 --> GameScene
-
-    //bool space_pressed = false;
-
-    /*
-    public enum menu_state
-    {
-        Title,
-        ToMainMenu,
-        MainMenu,
-        ToGame
-    }
-
-    public menu_state state;*/
 
     // Start is called before the first frame update
     void Start()
