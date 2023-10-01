@@ -8,6 +8,7 @@ using TMPro;
 public class GameSceneManager : MonoBehaviour
 {
     private Scene load;
+    private Scene unload;
 
     // Start is called before the first frame update
     void Start()
@@ -38,8 +39,13 @@ public class GameSceneManager : MonoBehaviour
                 load = SceneManager.GetSceneByName("NewGameScene");
                 if (load.name == null)
                 {
+                    unload = SceneManager.GetSceneByName("GameOver");
+                    if(!(unload.name == null))
+                        SceneManager.UnloadSceneAsync(4); 
                     SceneManager.LoadScene(3, LoadSceneMode.Additive);
-                    SceneManager.UnloadSceneAsync(2);
+                    unload = SceneManager.GetSceneByName("MainMenu");
+                    if(!(unload.name == null))
+                        SceneManager.UnloadSceneAsync(2);
                 }
                 break;
             case FSM.gamestate.gameOver:
