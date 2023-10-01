@@ -55,59 +55,60 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.zero);
-        //move forward
-        if (Input.GetKeyDown(KeyCode.W))
+        if(FSM.fsm.state == FSM.gamestate.play)
         {
-            playerRb2.AddForce(transform.right, ForceMode2D.Impulse);
-            myAnim.Play("Move");
-        }
+            transform.Rotate(Vector3.zero);
+            //move forward
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                playerRb2.AddForce(transform.right, ForceMode2D.Impulse);
+                myAnim.Play("Move");
+            }
 
-        //right rotation
-        if (Input.GetKey(KeyCode.A))
-        {
-            rotation_dir = 0.1f * rotation_speed * Time.deltaTime;
-            playerRb2.AddTorque(rotation_dir, ForceMode2D.Impulse);
-            //myAnim.Play("Move");
-        }
+            //right rotation
+            if (Input.GetKey(KeyCode.A))
+            {
+                rotation_dir = 0.1f * rotation_speed * Time.deltaTime;
+                playerRb2.AddTorque(rotation_dir, ForceMode2D.Impulse);
+                //myAnim.Play("Move");
+            }
 
-        //left rotation
-        if (Input.GetKey(KeyCode.D))
-        {
-            rotation_dir = -0.1f * rotation_speed * Time.deltaTime;
-            playerRb2.AddTorque(rotation_dir, ForceMode2D.Impulse);
-            //myAnim.Play("Move");
-        }
+            //left rotation
+            if (Input.GetKey(KeyCode.D))
+            {
+                rotation_dir = -0.1f * rotation_speed * Time.deltaTime;
+                playerRb2.AddTorque(rotation_dir, ForceMode2D.Impulse);
+                //myAnim.Play("Move");
+            }
 
-        //shoot
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            gun = this.gameObject.transform.GetChild(0).gameObject;
-            Instantiate(projectile, gun.transform.position, gun.transform.rotation);
-        }
+            //shoot
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                gun = this.gameObject.transform.GetChild(0).gameObject;
+                Instantiate(projectile, gun.transform.position, gun.transform.rotation);
+            }
 
-        //stabilize the ship
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            playerRb2.velocity = Vector2.zero;
-            playerRb2.angularVelocity = 0;
-        }
+            //stabilize the ship
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                playerRb2.velocity = Vector2.zero;
+                playerRb2.angularVelocity = 0;
+            }
 
-        //teleport the ship
-        if (Input.GetKey(KeyCode.T))
-        {
-            teleport();
+            //teleport the ship
+            if (Input.GetKey(KeyCode.T))
+            {
+                teleport();
+            }
         }
-
+        
         //restart after dead
         if (FSM.fsm.state == FSM.gamestate.dead)
             if (Input.GetKey(KeyCode.R))
                 resetAll();
         
         if(life == 0)
-        {
             gameOver();
-        }
 
         toroidal_space();
     }

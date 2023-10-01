@@ -32,7 +32,7 @@ public class Main : MonoBehaviour
                 cameraMovement();
                 break;
             case FSM.gamestate.play:
-                //Event.enabled = true;
+                //Event.enabled = false;
                 break;
         }
     }
