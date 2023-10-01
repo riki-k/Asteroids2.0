@@ -12,6 +12,7 @@ public class MovingAsteroids : MonoBehaviour
     private float y_bottom_borders;
 
     private SpriteRenderer playersprite;
+    private CircleCollider2D colliderCircle;
     public Animator myAnim;
 
     Vector3 borders;
@@ -26,6 +27,7 @@ public class MovingAsteroids : MonoBehaviour
         y_bottom_borders = Main.main.gameCamera.transform.position.y + half_y_size_camera;
         playersprite = GetComponent<SpriteRenderer>();
         myAnim = GetComponent<Animator>();
+        colliderCircle = GetComponent<CircleCollider2D>();
         speed = Random.Range(5, 10);
     }
 
@@ -74,6 +76,7 @@ public class MovingAsteroids : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Projectile"))
         {
+            colliderCircle.enabled = false;
             myAnim.Play("Destroy");
             Destroy(gameObject, 1);
             FindObjectOfType<SpawnManager>().asteroids_counter--;

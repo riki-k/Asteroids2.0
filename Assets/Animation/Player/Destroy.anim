@@ -21,41 +21,41 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 48137824, guid: 2574ea2cba87a8a44b400d7267fdc154, type: 3}
-    - time: 0.071428575
+    - time: 0.06666667
       value: {fileID: -1029336222, guid: 2574ea2cba87a8a44b400d7267fdc154, type: 3}
-    - time: 0.14285715
+    - time: 0.13333334
       value: {fileID: -1511331982, guid: 2574ea2cba87a8a44b400d7267fdc154, type: 3}
-    - time: 0.21428572
+    - time: 0.2
       value: {fileID: 2118285259, guid: 2574ea2cba87a8a44b400d7267fdc154, type: 3}
-    - time: 0.2857143
+    - time: 0.26666668
       value: {fileID: -859587428, guid: 2574ea2cba87a8a44b400d7267fdc154, type: 3}
-    - time: 0.35714287
+    - time: 0.33333334
       value: {fileID: -18989226, guid: 2574ea2cba87a8a44b400d7267fdc154, type: 3}
-    - time: 0.42857143
+    - time: 0.4
       value: {fileID: -385575617, guid: 2574ea2cba87a8a44b400d7267fdc154, type: 3}
-    - time: 0.5
+    - time: 0.46666667
       value: {fileID: 1942612113, guid: 2574ea2cba87a8a44b400d7267fdc154, type: 3}
-    - time: 0.5714286
+    - time: 0.53333336
       value: {fileID: 468750405, guid: 2574ea2cba87a8a44b400d7267fdc154, type: 3}
-    - time: 0.64285713
+    - time: 0.6
       value: {fileID: 1503545463, guid: 2574ea2cba87a8a44b400d7267fdc154, type: 3}
-    - time: 0.71428573
+    - time: 0.6666667
       value: {fileID: 401532834, guid: 2574ea2cba87a8a44b400d7267fdc154, type: 3}
-    - time: 0.78571427
+    - time: 0.73333335
       value: {fileID: -75797678, guid: 2574ea2cba87a8a44b400d7267fdc154, type: 3}
-    - time: 0.85714287
+    - time: 0.8
       value: {fileID: -336860672, guid: 2574ea2cba87a8a44b400d7267fdc154, type: 3}
-    - time: 0.9285714
+    - time: 0.8666667
       value: {fileID: 1537111223, guid: 2574ea2cba87a8a44b400d7267fdc154, type: 3}
-    - time: 1
+    - time: 0.93333334
       value: {fileID: -1003448704, guid: 2574ea2cba87a8a44b400d7267fdc154, type: 3}
-    - time: 1.0714285
+    - time: 1
       value: {fileID: 2042872455, guid: 2574ea2cba87a8a44b400d7267fdc154, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 14
+  m_SampleRate: 15
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -91,7 +91,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.1428571
+    m_StopTime: 1.0666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
