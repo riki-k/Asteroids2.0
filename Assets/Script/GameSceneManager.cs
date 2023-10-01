@@ -42,6 +42,14 @@ public class GameSceneManager : MonoBehaviour
                     SceneManager.UnloadSceneAsync(2);
                 }
                 break;
+            case FSM.gamestate.gameOver:
+                load = SceneManager.GetSceneByName("GameOver");
+                if(load.name == null)
+                {
+                    SceneManager.LoadScene(4, LoadSceneMode.Additive);
+                    SceneManager.UnloadSceneAsync(3);
+                }
+                break;
         }
     }
 

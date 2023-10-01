@@ -10,7 +10,8 @@ public class FSM : MonoBehaviour
         menu,
         play,
         dead,
-        pause
+        pause,
+        gameOver
     }
 
     public gamestate state;
