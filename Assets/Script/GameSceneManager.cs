@@ -31,8 +31,14 @@ public class GameSceneManager : MonoBehaviour
                 if (load.name == null)
                     if(Main.main.camera_menu_position)
                     {
+                        unload = SceneManager.GetSceneByName("HighScore");
+                        if(!(unload.name == null))
+                        {
+                            SceneManager.UnloadSceneAsync(5);
+                        }
+                        else
+                            SceneManager.UnloadSceneAsync(1);
                         SceneManager.LoadScene(2, LoadSceneMode.Additive);
-                        SceneManager.UnloadSceneAsync(1);
                     }        
                 break;
             case FSM.gamestate.play :
@@ -56,12 +62,30 @@ public class GameSceneManager : MonoBehaviour
                     SceneManager.UnloadSceneAsync(3);
                 }
                 break;
+            case FSM.gamestate.highScore:
+                load = SceneManager.GetSceneByName("HighScore");
+                if(load.name == null)
+                {
+                    unload = SceneManager.GetSceneByName("GameOver");
+                    if (!(unload.name == null))
+                        SceneManager.UnloadSceneAsync(4);
+                    unload = SceneManager.GetSceneByName("MainMenu");
+                    if (!(unload.name == null))
+                        SceneManager.UnloadSceneAsync(2);
+                    SceneManager.LoadScene(5, LoadSceneMode.Additive);
+                }
+                break;
         }
     }
 
     public void LoadNewgame()
     {
         FSM.fsm.state = FSM.gamestate.play;
+    }
+
+    public void HighScoreScene()
+    {
+        FSM.fsm.state = FSM.gamestate.highScore;
     }
 
     public void QuitGame()

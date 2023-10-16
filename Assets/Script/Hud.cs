@@ -6,6 +6,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Hud : MonoBehaviour
@@ -15,6 +16,9 @@ public class Hud : MonoBehaviour
     public TMP_Text times;
     public TMP_Text points;
     public TMP_Text pressToRestart;
+    public Image imageLife_1;
+    public Image imageLife_2;
+    public Image imageLife_3;
 
     public int point;
 
@@ -31,7 +35,7 @@ public class Hud : MonoBehaviour
     void Update()
     {
         times.text = Time.realtimeSinceStartup.ToString();
-        points.text = point.ToString();
+        points.text = Main.main.playerPoint.ToString();
         switch(FSM.fsm.state)
         {
             case FSM.gamestate.play :
@@ -39,6 +43,21 @@ public class Hud : MonoBehaviour
                 break;
             case FSM.gamestate.dead:
                 pressToRestart.enabled = true;
+                switch (FindObjectOfType<PlayerController>().life)
+                {
+                    case 3:
+                        break;
+                    case 2:
+                        imageLife_1.enabled = false;
+                        break;
+                    case 1:
+                        imageLife_2.enabled = false;
+                        break;
+                    case 0:
+                        imageLife_3.enabled = false;
+                        break;
+                }
+                
                 break;
         }
     }

@@ -11,7 +11,8 @@ public class FSM : MonoBehaviour
         play,
         dead,
         pause,
-        gameOver
+        gameOver,
+        highScore
     }
 
     public gamestate state;

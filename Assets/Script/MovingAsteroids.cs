@@ -80,7 +80,7 @@ public class MovingAsteroids : MonoBehaviour
             myAnim.Play("Destroy");
             Destroy(gameObject, 1);
             FindObjectOfType<SpawnManager>().asteroids_counter--;
-            Hud.hud.point += 100;
+            Main.main.playerPoint += 100;
         }
 
         if (collision.gameObject.CompareTag("Player"))

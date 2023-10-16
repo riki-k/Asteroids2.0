@@ -7,7 +7,7 @@ public class GameOver : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -18,5 +18,9 @@ public class GameOver : MonoBehaviour
     public void LoadNewgame()
     {
         FSM.fsm.state = FSM.gamestate.play;
+    }
+    public void HighScoreScene()
+    {
+        FSM.fsm.state = FSM.gamestate.highScore;
     }
 }

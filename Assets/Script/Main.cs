@@ -13,6 +13,9 @@ public class Main : MonoBehaviour
     public bool camera_menu_position;
     public bool camera_game_position;
 
+    public string playerName;
+    public int playerPoint;
+
     // Start is called before the first frame update
     void Start()
     {

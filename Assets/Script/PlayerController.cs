@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     private float half_y_size_camera;
     private float x_left_borders;
     private float y_bottom_borders;
-    private float life;
+    public float life;
 
     // Start is called before the first frame update
     void Start()
