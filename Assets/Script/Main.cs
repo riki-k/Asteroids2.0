@@ -3,6 +3,20 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine;
 
+[System.Serializable]
+public class scoringStruct
+{
+    public string text;
+    public int value;
+}
+
+//game data class
+[System.Serializable]
+public class GameData
+{
+    public List<scoringStruct> playerInfo;
+}
+
 public class Main : MonoBehaviour
 {
     public static Main main;
