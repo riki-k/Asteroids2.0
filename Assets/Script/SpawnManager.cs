@@ -6,11 +6,12 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject asteroids;
     public GameObject ufo;
-    public GameObject spaceship;
 
     public int asteroids_counter = 0;
     private float startDelay = 1.0f;
     private float spawnInterval = 2.0f;
+    private float startDelayUfo = 15f;
+    private float spawnIntervalUfo = 35f;
     private float half_x_size_camera;
     private float half_y_size_camera;
     private float x_left_borders;
@@ -29,6 +30,7 @@ public class SpawnManager : MonoBehaviour
         y_bottom_borders = Main.main.gameCamera.transform.position.y + half_y_size_camera;
 
         InvokeRepeating("spawnAsteroids", startDelay, spawnInterval);
+        InvokeRepeating("spawnUfo", startDelayUfo, spawnIntervalUfo);
     }
 
     // Update is called once per frame
@@ -95,5 +97,35 @@ public class SpawnManager : MonoBehaviour
             }
         }
         
+    }
+
+    void spawnUfo()
+    {
+        if (!(FSM.fsm.state == FSM.gamestate.dead))
+        {
+            Vector3 ufoDirection;
+            Vector3 ufoPosition;
+            Quaternion direction = new Quaternion(0, 0, 0, 0);
+
+            //dx or sx & h pos
+            int LR = Random.Range(0, 2);
+            int heightPosition = Random.Range(-20, -30);
+
+            if (LR == 0)
+            {
+                //move from l to r
+                ufoDirection = Vector3.right;
+                ufoPosition = new Vector3(-34, heightPosition, 0);
+            }
+            else
+            {
+                //move from r to l
+                ufoDirection = Vector3.left;
+                ufoPosition = new Vector3(-15, heightPosition, 0);
+            }
+
+            Instantiate(ufo, ufoPosition, direction, this.transform);
+
+        }
     }
 }

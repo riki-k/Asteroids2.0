@@ -266,6 +266,8 @@ MonoBehaviour:
   gameCamera: {fileID: 1503194229}
   camera_menu_position: 0
   camera_game_position: 0
+  playerName: 
+  playerPoint: 0
 --- !u!1 &1503194227
 GameObject:
   m_ObjectHideFlags: 0

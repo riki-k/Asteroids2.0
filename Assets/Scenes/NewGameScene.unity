@@ -1346,8 +1346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroids: {fileID: 2043537627734151035, guid: 5f2df6b3fdcaa7c4ea344cc5a6ce23de, type: 3}
-  ufo: {fileID: 0}
-  spaceship: {fileID: 0}
+  ufo: {fileID: 7354906442422712871, guid: b2d3765c0e0f9874abedbc4a3d860693, type: 3}
   asteroids_counter: 0
 --- !u!4 &1149354370
 Transform:
