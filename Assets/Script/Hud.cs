@@ -21,7 +21,7 @@ public class Hud : MonoBehaviour
     public Image imageLife_3;
 
     public int point;
-
+    PlayerController Player;
     
     // Start is called before the first frame update
     void Start()

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Asteroids
   - Projectile
+  - UfoProjectile
   layers:
   - Default
   - TransparentFX

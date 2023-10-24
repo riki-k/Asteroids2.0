@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class Ufo : MonoBehaviour
 {
+    public GameObject ufoProjectile;
+
+    private float startShoot = 0.5f;
+    private float delayShoot = 0.5f;
+
+    bool outOfBorders;
     //direction 0 = right, 1 = left
     bool direction;
-    float speed = 10f;
+    float speed = 7f;
 
     // Start is called before the first frame update
     void Start()
     {
+        outOfBorders = false;
         if (transform.position.x > -20)
             direction = false;
         else
             direction = true;
+
+        InvokeRepeating("shoot", startShoot, delayShoot);
     }
 
     // Update is called once per frame
@@ -31,6 +40,17 @@ public class Ufo : MonoBehaviour
     void destroyOuterBounds()
     {
         if (transform.position.x < -37 || transform.position.x > -15)
-            Destroy(gameObject);
+        {
+            if (transform.childCount == 0)
+                Destroy(gameObject);
+            outOfBorders = true;
+        }
+            
+    }
+
+    void shoot()
+    {
+        if(!outOfBorders)
+            Instantiate(ufoProjectile, transform);
     }
 }

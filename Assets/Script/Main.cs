@@ -30,6 +30,7 @@ public class Main : MonoBehaviour
     public string playerName;
     public int playerPoint;
 
+
     // Start is called before the first frame update
     void Start()
     {

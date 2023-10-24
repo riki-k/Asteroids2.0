@@ -165,6 +165,14 @@ public class PlayerController : MonoBehaviour
             FSM.fsm.state = FSM.gamestate.dead;
             life -= 1;
         }
+
+        if (collision.gameObject.CompareTag("UfoProjectile"))
+        {
+            //remove life
+            myAnim.Play("Destroy");
+            FSM.fsm.state = FSM.gamestate.dead;
+            life -= 1;
+        }
     }
 
 }
