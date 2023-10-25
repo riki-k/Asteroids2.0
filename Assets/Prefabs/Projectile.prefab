@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2520407218098876677}
   - component: {fileID: 1523159043224624693}
   - component: {fileID: 6474628636920840908}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Projectile
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -122,9 +122,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0028351843, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.09601876
 --- !u!114 &1523159043224624693
 MonoBehaviour:
   m_ObjectHideFlags: 0

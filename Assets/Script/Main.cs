@@ -30,6 +30,7 @@ public class Main : MonoBehaviour
     public string playerName;
     public int playerPoint;
 
+    public bool deadAnimationFinished;
 
     // Start is called before the first frame update
     void Start()

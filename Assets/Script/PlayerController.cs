@@ -172,6 +172,8 @@ public class PlayerController : MonoBehaviour
             myAnim.Play("Destroy");
             FSM.fsm.state = FSM.gamestate.dead;
             life -= 1;
+
+            Debug.Log(myAnim.GetCurrentAnimatorStateInfo(0));
         }
     }
 
