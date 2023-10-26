@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRb2;
     private SpriteRenderer playersprite;
 
+    [SerializeField] private AudioClip shoots;
+    [SerializeField] private AudioClip dead;
+    private AudioSource effects;
+
     private Vector3 borders;
     public Vector3 initialPosition;
 
@@ -28,6 +32,7 @@ public class PlayerController : MonoBehaviour
         playerRb2 = GetComponent<Rigidbody2D>();
         playersprite = GetComponent<SpriteRenderer>();
         myAnim = GetComponent<Animator>();
+        effects = GetComponent<AudioSource>();
         rotation_dir = 0;
         rotation_speed = 5;
         initialPosition = transform.position;
@@ -86,6 +91,8 @@ public class PlayerController : MonoBehaviour
             {
                 gun = this.gameObject.transform.GetChild(0).gameObject;
                 Instantiate(projectile, gun.transform.position, gun.transform.rotation);
+                effects.clip = shoots;
+                effects.Play();
             }
 
             //stabilize the ship
@@ -172,9 +179,10 @@ public class PlayerController : MonoBehaviour
             myAnim.Play("Destroy");
             FSM.fsm.state = FSM.gamestate.dead;
             life -= 1;
-
-            Debug.Log(myAnim.GetCurrentAnimatorStateInfo(0));
         }
+
+        effects.clip = dead;
+        effects.Play();
     }
 
 }

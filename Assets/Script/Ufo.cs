@@ -5,6 +5,8 @@ using UnityEngine;
 public class Ufo : MonoBehaviour
 {
     public GameObject ufoProjectile;
+    [SerializeField] AudioClip destruction;
+    private AudioSource effects;
 
     private float startShoot = 0.5f;
     private float delayShoot = 20f;
@@ -22,6 +24,8 @@ public class Ufo : MonoBehaviour
             direction = false;
         else
             direction = true;
+
+        effects = GetComponent<AudioSource>();
 
         InvokeRepeating("shoot", startShoot, delayShoot);
 
@@ -62,5 +66,8 @@ public class Ufo : MonoBehaviour
             Destroy(gameObject);
             Main.main.playerPoint += 200;
         }
+
+        effects.clip = destruction;
+        effects.Play();
     }
 }

@@ -20,6 +20,7 @@ public class GameData
 public class Main : MonoBehaviour
 {
     public static Main main;
+    public AudioSource Music;
 
     public EventSystem Event;
     public Camera gameCamera;
@@ -51,7 +52,8 @@ public class Main : MonoBehaviour
                 cameraMovement();
                 break;
             case FSM.gamestate.play:
-                //Event.enabled = false;
+                if (Music.volume > 0.5f)
+                    Music.volume -= 0.001f;
                 break;
         }
     }

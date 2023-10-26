@@ -9,7 +9,9 @@ public class UfoProjectile : MonoBehaviour
     private float half_x_size_camera;
     private float half_y_size_camera;
     public Vector3 borders;
-    private Vector3 initialPos;
+
+    [SerializeField] AudioClip destruction;
+    private AudioSource effects;
 
     float speed = 5f;
 
@@ -21,19 +23,14 @@ public class UfoProjectile : MonoBehaviour
         half_y_size_camera = (Main.main.gameCamera.transform.position.y - borders.y);
         transform.parent = null;
 
-        /*
-        Vector3 look = transform.InverseTransformPoint(target.transform.position);
-        float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg;
+        effects = GetComponent<AudioSource>();
 
-        transform.Rotate(0, 0, angle);*/
-
-        //initialPos = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*
+        /* alternative
         Vector3 look = transform.InverseTransformPoint(target.transform.position);
         float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg;
 
@@ -42,8 +39,6 @@ public class UfoProjectile : MonoBehaviour
         transform.Translate(Vector3.right * Time.deltaTime * speed);*/
 
         transform.position = Vector2.MoveTowards(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position, Time.deltaTime * speed);
-
-        Debug.Log(target.transform.position);
 
         destroyOnPlayerDead();
         destroyOutLimits();
@@ -60,6 +55,9 @@ public class UfoProjectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        effects.clip = destruction;
+        effects.Play();
     }
 
     void destroyOnPlayerDead()

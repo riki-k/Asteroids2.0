@@ -138,3 +138,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 3172145790061938523, guid: bcd1755fe7a6c0949b8e7c7cfa8bbacb, type: 3}
   borders: {x: 0, y: 0, z: 0}
+  destruction: {fileID: 8300000, guid: 6a8a4f35d502e944797aa03cb7972bda, type: 3}

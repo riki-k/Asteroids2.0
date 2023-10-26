@@ -14,6 +14,9 @@ public class MovingAsteroids : MonoBehaviour
     private SpriteRenderer playersprite;
     private CircleCollider2D colliderCircle;
     public Animator myAnim;
+    private AudioSource effects;
+    [SerializeField] AudioClip destruction;
+
 
     Vector3 borders;
 
@@ -28,6 +31,7 @@ public class MovingAsteroids : MonoBehaviour
         playersprite = GetComponent<SpriteRenderer>();
         myAnim = GetComponent<Animator>();
         colliderCircle = GetComponent<CircleCollider2D>();
+        effects = GetComponent<AudioSource>();
         speed = Random.Range(5, 10);
     }
 
@@ -88,5 +92,8 @@ public class MovingAsteroids : MonoBehaviour
             myAnim.Play("Destroy");
             Destroy(gameObject, 1);
         }
+
+        effects.clip = destruction;
+        effects.Play();
     }
 }
