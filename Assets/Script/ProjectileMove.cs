@@ -40,5 +40,17 @@ public class ProjectileMove : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.CompareTag("UfoProjectile"))
+        {
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Ufo"))
+        {
+            Destroy(gameObject);
+        }
     }
+
+
 }

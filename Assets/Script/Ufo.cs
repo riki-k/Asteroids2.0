@@ -7,7 +7,7 @@ public class Ufo : MonoBehaviour
     public GameObject ufoProjectile;
 
     private float startShoot = 0.5f;
-    private float delayShoot = 0.5f;
+    private float delayShoot = 20f;
 
     bool outOfBorders;
     //direction 0 = right, 1 = left
@@ -24,6 +24,7 @@ public class Ufo : MonoBehaviour
             direction = true;
 
         InvokeRepeating("shoot", startShoot, delayShoot);
+
     }
 
     // Update is called once per frame
@@ -45,12 +46,21 @@ public class Ufo : MonoBehaviour
                 Destroy(gameObject);
             outOfBorders = true;
         }
-            
+
     }
 
     void shoot()
     {
-        if(!outOfBorders)
-            Instantiate(ufoProjectile, transform);
+        if (!outOfBorders)
+            Instantiate(ufoProjectile, this.transform);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Projectile"))
+        {
+            Destroy(gameObject);
+            Main.main.playerPoint += 200;
+        }
     }
 }

@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15e0e676bd720749bbaca3b1a0fecbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1983494018130629393, guid: a0d5652478d0b6b4a904d1e33f071677, type: 3}
+  projectile: {fileID: 6763636781561623110, guid: ec662bce6c72d5a4a9d18493e250096c, type: 3}
   myAnim: {fileID: 0}
   initialPosition: {x: 0, y: 0, z: 0}
   life: 0

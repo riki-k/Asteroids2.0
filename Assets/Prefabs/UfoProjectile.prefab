@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -648964412480122677}
   - component: {fileID: -3667610434361292963}
   - component: {fileID: -7863124656411125385}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: UfoProjectile
   m_TagString: UfoProjectile
   m_Icon: {fileID: 0}
@@ -137,3 +137,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 3172145790061938523, guid: bcd1755fe7a6c0949b8e7c7cfa8bbacb, type: 3}
+  borders: {x: 0, y: 0, z: 0}
