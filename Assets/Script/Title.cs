@@ -26,6 +26,5 @@ public class Title : MonoBehaviour
                 press_any_key.text = "";
                 break;
         }
-        
     }
 }
