@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D playerRb2;
     private SpriteRenderer playersprite;
+    private PolygonCollider2D bodyCollider;
 
     [SerializeField] private AudioClip shoots;
     [SerializeField] private AudioClip dead;
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
     private float x_left_borders;
     private float y_bottom_borders;
     public float life;
+    public bool destroyed;
 
     // Start is called before the first frame update
     void Start()
@@ -33,10 +35,12 @@ public class PlayerController : MonoBehaviour
         playersprite = GetComponent<SpriteRenderer>();
         myAnim = GetComponent<Animator>();
         effects = GetComponent<AudioSource>();
+        bodyCollider = GetComponent<PolygonCollider2D>();
         rotation_dir = 0;
         rotation_speed = 5;
         initialPosition = transform.position;
         life = 3;
+        destroyed = false;
 
         //adjust the scale and the rotation speed based on texture
         //if the texture is spaceship.png
@@ -113,10 +117,12 @@ public class PlayerController : MonoBehaviour
         if (FSM.fsm.state == FSM.gamestate.dead)
             if (Input.GetKey(KeyCode.R))
                 resetAll();
-        
+
+        Main.main.deadAnimationFinished = destroyed;
+
         if(life == 0)
             gameOver();
-
+            
         toroidal_space();
     }
 
@@ -156,6 +162,8 @@ public class PlayerController : MonoBehaviour
         playerRb2.angularVelocity = 0;
         transform.position = initialPosition;
         myAnim.Play("Idle");
+        bodyCollider.enabled = true;
+        destroyed = false;
     }
 
     void gameOver()
@@ -171,6 +179,7 @@ public class PlayerController : MonoBehaviour
             myAnim.Play("Destroy");
             FSM.fsm.state = FSM.gamestate.dead;
             life -= 1;
+            bodyCollider.enabled = false;
         }
 
         if (collision.gameObject.CompareTag("UfoProjectile"))
@@ -179,6 +188,7 @@ public class PlayerController : MonoBehaviour
             myAnim.Play("Destroy");
             FSM.fsm.state = FSM.gamestate.dead;
             life -= 1;
+            bodyCollider.enabled = false;
         }
 
         effects.clip = dead;

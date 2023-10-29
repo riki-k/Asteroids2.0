@@ -42,7 +42,8 @@ public class Hud : MonoBehaviour
                 pressToRestart.enabled = false;
                 break;
             case FSM.gamestate.dead:
-                pressToRestart.enabled = true;
+                if(Main.main.deadAnimationFinished)
+                    pressToRestart.enabled = true;
                 switch (FindObjectOfType<PlayerController>().life)
                 {
                     case 3:

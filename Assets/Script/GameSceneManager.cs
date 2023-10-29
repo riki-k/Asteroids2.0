@@ -58,8 +58,12 @@ public class GameSceneManager : MonoBehaviour
                 load = SceneManager.GetSceneByName("GameOver");
                 if(load.name == null)
                 {
-                    SceneManager.LoadScene(4, LoadSceneMode.Additive);
-                    SceneManager.UnloadSceneAsync(3);
+                    if (Main.main.deadAnimationFinished)
+                    {
+                        SceneManager.LoadScene(4, LoadSceneMode.Additive);
+                        SceneManager.UnloadSceneAsync(3);
+                    }
+                    
                 }
                 break;
             case FSM.gamestate.highScore:
