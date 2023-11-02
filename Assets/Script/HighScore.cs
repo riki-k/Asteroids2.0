@@ -26,10 +26,15 @@ public class HighScore : MonoBehaviour
     public TMP_Text Name_4;
     public TMP_Text Name_5;
 
+    public bool fadeOutTransitionCompleted;
+    private Animator myAnim;
+
     // Start is called before the first frame update
     void Start()
     {
         highscore = this;
+        fadeOutTransitionCompleted = false;
+        myAnim = GetComponent<Animator>();
 
         //load the value from the file into a list/array
         Load();
@@ -41,7 +46,8 @@ public class HighScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(fadeOutTransitionCompleted)
+            FSM.fsm.state = FSM.gamestate.menu;
     }
 
     public void ReturnToMenu()
@@ -50,7 +56,7 @@ public class HighScore : MonoBehaviour
     }
     public void backButton()
     {
-        FSM.fsm.state = FSM.gamestate.menu;
+        myAnim.Play("FadeOut");
     }
 
 
