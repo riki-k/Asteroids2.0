@@ -9,16 +9,11 @@ public class GameSceneManager : MonoBehaviour
 {
     private Scene load;
     private Scene unload;
-    public bool fadeTransitionFinished;
-    private bool startInTrasition;
-    private Animator myAnim;
 
     // Start is called before the first frame update
     void Start()
     {
-        myAnim = GetComponent<Animator>();
-        fadeTransitionFinished = false;
-        startInTrasition = false;
+
     }
 
     // Update is called once per frame
@@ -39,26 +34,15 @@ public class GameSceneManager : MonoBehaviour
                     {
                         unload = SceneManager.GetSceneByName("Title");
                         if(!(unload.name == null))
-                        {
                             SceneManager.UnloadSceneAsync(1);
-                            SceneManager.LoadScene(2, LoadSceneMode.Additive);
-                        }
-                        else
-                        {
-                            unload = SceneManager.GetSceneByName("HighScore");
-                            if (!(unload.name == null))
-                                SceneManager.UnloadSceneAsync(5);
-                            unload = SceneManager.GetSceneByName("HowToPlay");
-                            if (!(unload.name == null))
-                                SceneManager.UnloadSceneAsync(6);
+                        unload = SceneManager.GetSceneByName("HighScore");
+                        if (!(unload.name == null))
+                            SceneManager.UnloadSceneAsync(5);
+                        unload = SceneManager.GetSceneByName("HowToPlay");
+                        if (!(unload.name == null))
+                            SceneManager.UnloadSceneAsync(6);
 
-                            SceneManager.LoadScene(2, LoadSceneMode.Additive);
-                            if (!startInTrasition)
-                            {
-                                myAnim.Play("FadeIn");
-                                startInTrasition = true;
-                            }
-                        }
+                        SceneManager.LoadScene(2, LoadSceneMode.Additive);
                     }        
                 break;
 
@@ -69,13 +53,10 @@ public class GameSceneManager : MonoBehaviour
                     unload = SceneManager.GetSceneByName("GameOver");
                     if(!(unload.name == null))
                         SceneManager.UnloadSceneAsync(4);
-                    if (fadeTransitionFinished)
-                    {
-                        SceneManager.LoadScene(3, LoadSceneMode.Additive);
-                        unload = SceneManager.GetSceneByName("MainMenu");
-                        if (!(unload.name == null))
-                            SceneManager.UnloadSceneAsync(2);
-                    }   
+                    SceneManager.LoadScene(3, LoadSceneMode.Additive);
+                    unload = SceneManager.GetSceneByName("MainMenu");
+                    if (!(unload.name == null))
+                        SceneManager.UnloadSceneAsync(2);
                 }
                 break;
 
@@ -88,7 +69,6 @@ public class GameSceneManager : MonoBehaviour
                         SceneManager.LoadScene(4, LoadSceneMode.Additive);
                         SceneManager.UnloadSceneAsync(3);
                     }
-                    
                 }
                 break;
 
@@ -99,14 +79,10 @@ public class GameSceneManager : MonoBehaviour
                     unload = SceneManager.GetSceneByName("GameOver");
                     if (!(unload.name == null))
                         SceneManager.UnloadSceneAsync(4);
-                    if (fadeTransitionFinished)
-                    {
-                        unload = SceneManager.GetSceneByName("MainMenu");
-                        if (!(unload.name == null))
-                            SceneManager.UnloadSceneAsync(2);
-                        SceneManager.LoadScene(5, LoadSceneMode.Additive);
-                    }
-                    
+                    unload = SceneManager.GetSceneByName("MainMenu");
+                    if (!(unload.name == null))
+                        SceneManager.UnloadSceneAsync(2);
+                    SceneManager.LoadScene(5, LoadSceneMode.Additive);
                 }
                 break;
 
@@ -124,35 +100,8 @@ public class GameSceneManager : MonoBehaviour
 
     }
 
-    public void LoadNewgame()
-    {
-        myAnim.Play("Fade");
-        FSM.fsm.state = FSM.gamestate.play;
-    }
-
-    public void HighScoreScene()
-    {
-        fadeTransitionFinished = false;
-        myAnim.Play("Fade");
-        FSM.fsm.state = FSM.gamestate.highScore;
-    }
-
-    public void HowToPlay()
-    {
-        myAnim.Play("Fade");
-        FSM.fsm.state = FSM.gamestate.howTo;
-    }
-
     public void BackToMenu()
     {
         FSM.fsm.state = FSM.gamestate.menu;
-    }
-
-    public void QuitGame()
-    {
-        if(SceneManager.GetActiveScene().buildIndex == 0)
-        {
-            Application.Quit();
-        }
     }
 }

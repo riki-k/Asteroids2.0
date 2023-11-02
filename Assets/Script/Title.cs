@@ -20,7 +20,10 @@ public class Title : MonoBehaviour
         {
             case FSM.gamestate.title :
                 if (Input.anyKeyDown)
+                {
                     FSM.fsm.state = FSM.gamestate.menu;
+                    Main.main.comeFromTitle = true;
+                } 
                 break;
             case FSM.gamestate.menu :
                 press_any_key.text = "";
