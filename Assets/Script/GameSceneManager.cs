@@ -9,11 +9,14 @@ public class GameSceneManager : MonoBehaviour
 {
     private Scene load;
     private Scene unload;
+    public bool fadeTransitionFinished;
+    private Animator myAnim;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        myAnim = GetComponent<Animator>();
+        fadeTransitionFinished = false;
     }
 
     // Update is called once per frame
@@ -33,11 +36,14 @@ public class GameSceneManager : MonoBehaviour
                     {
                         unload = SceneManager.GetSceneByName("HighScore");
                         if(!(unload.name == null))
-                        {
                             SceneManager.UnloadSceneAsync(5);
-                        }
-                        else
+                        unload = SceneManager.GetSceneByName("HowToPlay");
+                        if (!(unload.name == null))
+                            SceneManager.UnloadSceneAsync(6);
+                        unload = SceneManager.GetSceneByName("Title");
+                        if(!(unload.name == null))
                             SceneManager.UnloadSceneAsync(1);
+                        
                         SceneManager.LoadScene(2, LoadSceneMode.Additive);
                     }        
                 break;
@@ -47,13 +53,17 @@ public class GameSceneManager : MonoBehaviour
                 {
                     unload = SceneManager.GetSceneByName("GameOver");
                     if(!(unload.name == null))
-                        SceneManager.UnloadSceneAsync(4); 
-                    SceneManager.LoadScene(3, LoadSceneMode.Additive);
-                    unload = SceneManager.GetSceneByName("MainMenu");
-                    if(!(unload.name == null))
-                        SceneManager.UnloadSceneAsync(2);
+                        SceneManager.UnloadSceneAsync(4);
+                    if (fadeTransitionFinished)
+                    {
+                        SceneManager.LoadScene(3, LoadSceneMode.Additive);
+                        unload = SceneManager.GetSceneByName("MainMenu");
+                        if (!(unload.name == null))
+                            SceneManager.UnloadSceneAsync(2);
+                    }   
                 }
                 break;
+
             case FSM.gamestate.gameOver:
                 load = SceneManager.GetSceneByName("GameOver");
                 if(load.name == null)
@@ -66,6 +76,7 @@ public class GameSceneManager : MonoBehaviour
                     
                 }
                 break;
+
             case FSM.gamestate.highScore:
                 load = SceneManager.GetSceneByName("HighScore");
                 if(load.name == null)
@@ -79,17 +90,42 @@ public class GameSceneManager : MonoBehaviour
                     SceneManager.LoadScene(5, LoadSceneMode.Additive);
                 }
                 break;
+
+            case FSM.gamestate.howTo:
+                load = SceneManager.GetSceneByName("HowToPlay");
+                if (load.name == null)
+                {
+                    unload = SceneManager.GetSceneByName("MainMenu");
+                    if (!(unload.name == null))
+                        SceneManager.UnloadSceneAsync(2);
+                    SceneManager.LoadScene(6, LoadSceneMode.Additive);
+                }
+                break;
         }
+
     }
 
     public void LoadNewgame()
     {
+        myAnim.Play("Fade");
         FSM.fsm.state = FSM.gamestate.play;
     }
 
     public void HighScoreScene()
     {
+        myAnim.Play("Fade");
         FSM.fsm.state = FSM.gamestate.highScore;
+    }
+
+    public void HowToPlay()
+    {
+        myAnim.Play("Fade");
+        FSM.fsm.state = FSM.gamestate.howTo;
+    }
+
+    public void BackToMenu()
+    {
+        FSM.fsm.state = FSM.gamestate.menu;
     }
 
     public void QuitGame()

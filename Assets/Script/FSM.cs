@@ -12,7 +12,8 @@ public class FSM : MonoBehaviour
         dead,
         pause,
         gameOver,
-        highScore
+        highScore,
+        howTo
     }
 
     public gamestate state;
