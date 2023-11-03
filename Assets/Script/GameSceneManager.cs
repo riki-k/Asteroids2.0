@@ -24,7 +24,21 @@ public class GameSceneManager : MonoBehaviour
             case FSM.gamestate.title :
                 load = SceneManager.GetSceneByName("Title");
                 if (load.name == null)
+                {
+                    unload = SceneManager.GetSceneByName("Credits");
+                    if (!(unload.name == null))
+                        SceneManager.UnloadSceneAsync(7);
                     SceneManager.LoadScene(1, LoadSceneMode.Additive);
+                }              
+                break;
+
+            case FSM.gamestate.credits:
+                load = SceneManager.GetSceneByName("Credits");
+                if (load.name == null)
+                {
+                    SceneManager.LoadScene(7, LoadSceneMode.Additive);
+                    SceneManager.UnloadSceneAsync(1);
+                }
                 break;
 
             case FSM.gamestate.menu :

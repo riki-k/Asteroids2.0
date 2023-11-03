@@ -52,6 +52,12 @@ public class Main : MonoBehaviour
                 Event.enabled = false;
                 cameraMovement();
                 break;
+            case FSM.gamestate.credits:
+                Event.enabled = false;
+                break;
+            case FSM.gamestate.title:
+                Event.enabled = true;
+                break;
             case FSM.gamestate.play:
                 if (Music.volume > 0.5f)
                     Music.volume -= 0.001f;
