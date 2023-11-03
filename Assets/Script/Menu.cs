@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using TMPro;
 
 public class Menu : MonoBehaviour
@@ -29,7 +30,8 @@ public class Menu : MonoBehaviour
         {
             myAnim.Play("ShowMenu");
             Main.main.comeFromTitle = false;
-        }  
+        }
+        
     }
 
     // Update is called once per frame
@@ -74,4 +76,5 @@ public class Menu : MonoBehaviour
     {
         Application.Quit();
     }
+
 }
