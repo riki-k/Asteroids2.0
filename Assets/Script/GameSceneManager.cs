@@ -41,6 +41,9 @@ public class GameSceneManager : MonoBehaviour
                         unload = SceneManager.GetSceneByName("HowToPlay");
                         if (!(unload.name == null))
                             SceneManager.UnloadSceneAsync(6);
+                        unload = SceneManager.GetSceneByName("GameOver");
+                        if (!(unload.name == null))
+                            SceneManager.UnloadSceneAsync(4);
 
                         SceneManager.LoadScene(2, LoadSceneMode.Additive);
                     }        
@@ -76,9 +79,6 @@ public class GameSceneManager : MonoBehaviour
                 load = SceneManager.GetSceneByName("HighScore");
                 if(load.name == null)
                 {
-                    unload = SceneManager.GetSceneByName("GameOver");
-                    if (!(unload.name == null))
-                        SceneManager.UnloadSceneAsync(4);
                     unload = SceneManager.GetSceneByName("MainMenu");
                     if (!(unload.name == null))
                         SceneManager.UnloadSceneAsync(2);

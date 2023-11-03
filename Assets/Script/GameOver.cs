@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using System.IO;
 using TMPro;
 
@@ -18,6 +19,10 @@ public class GameOver : MonoBehaviour
     public GameObject highScoreButton;
     public GameObject exitButton;
     public GameObject saveButton;
+    private Animator myAnim;
+    public bool newGametransitionFinished;
+    public bool mainMenuTransitionFinished;
+    public bool change;
 
     // Start is called before the first frame update
     void Start()
@@ -30,26 +35,42 @@ public class GameOver : MonoBehaviour
         Title.enabled = true;
         InputField.SetActive(true);
 
+        myAnim = GetComponent<Animator>();
+        newGametransitionFinished = false;
+        mainMenuTransitionFinished = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(newGametransitionFinished)
+            FSM.fsm.state = FSM.gamestate.play;
+        if (mainMenuTransitionFinished)
+            FSM.fsm.state = FSM.gamestate.menu;
 
+        if (change)
+            InternalChange();
     }
 
     public void LoadNewgame()
     {
-        FSM.fsm.state = FSM.gamestate.play;
+        myAnim.Play("FadeOut");
     }
-    public void HighScoreScene()
+    public void LoadMainMenu()
     {
-        FSM.fsm.state = FSM.gamestate.highScore;
+        myAnim.Play("FadeOutMenu");
     }
 
     public void Savedata()
     {
         Main.main.playerName = InputField.GetComponent<TMP_InputField>().text;
+        saveToFile();
+
+        myAnim.Play("Internal");
+    }
+
+    void InternalChange()
+    {
         saveButton.SetActive(false);
         Title.enabled = false;
         InputField.SetActive(false);
@@ -57,8 +78,6 @@ public class GameOver : MonoBehaviour
         newGameButton.SetActive(true);
         highScoreButton.SetActive(true);
         exitButton.SetActive(true);
-
-        saveToFile();
     }
 
     void saveToFile()

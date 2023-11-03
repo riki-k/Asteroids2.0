@@ -7,6 +7,7 @@ public class Ufo : MonoBehaviour
     public GameObject ufoProjectile;
     [SerializeField] AudioClip destruction;
     private AudioSource effects;
+    private Animator myAnim;
 
     private float startShoot = 0.5f;
     private float delayShoot = 20f;
@@ -26,6 +27,7 @@ public class Ufo : MonoBehaviour
             direction = true;
 
         effects = GetComponent<AudioSource>();
+        myAnim = GetComponent<Animator>();
 
         InvokeRepeating("shoot", startShoot, delayShoot);
 
@@ -63,11 +65,13 @@ public class Ufo : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Projectile"))
         {
+            myAnim.Play("UfoExplosion");
             Destroy(gameObject);
             Main.main.playerPoint += 200;
         }
 
         effects.clip = destruction;
         effects.Play();
+
     }
 }
