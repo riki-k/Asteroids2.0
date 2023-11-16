@@ -1,0 +1,49 @@
+Player Spritesheet:
+craftpix-net-757069-free-spaceship-pixel-art-sprite-sheets
+https://craftpix.net/freebies/free-spaceship-pixel-art-sprite-sheets/?num=1&count=23&sq=spaceship&pos=2
+https://craftpix.net/file-licenses/
+
+Asteroids Spritesheet:
+Foozle_2DS0015_Void_EnvironmentPack
+https://foozlecc.itch.io/void-environment-pack
+License: (Creative Commons Zero, CC0)
+
+Ufo Sprite:
+Free 2D UFO Sprites
+https://tokegameart.net/item/free-2d-ufo-sprites/
+https://tokegameart.net/licenses/
+
+Ufo explosion Spritesheet:
+free-png-xiyem
+https://www.pngwing.com/en/free-png-xiyem
+Non-commercial use, DMCA
+
+UfoProjectile:
+ball.png
+https://opengameart.org/content/energy-ball
+License(s): CC-BY 3.0
+
+Music:
+space-ranger-moire-main-version-03-04-10814
+https://uppbeat.io/track/moire/space-ranger
+https://uppbeat.io/commercial-licenses
+
+Player dead sound effect:
+boom-geomorphism-cinematic-trailer-sound-effects-123876
+https://pixabay.com/sound-effects/boom-geomorphism-cinematic-trailer-sound-effects-123876/
+https://pixabay.com/service/license-summary/
+
+Player Shot:
+mixkit-short-laser-gun-shot-1670
+https://mixkit.co/free-sound-effects/space-shooter/
+https://mixkit.co/license/#sfxFree
+
+Asteroids Explosion:
+big-impact-7054
+https://pixabay.com/sound-effects/big-impact-7054/
+https://pixabay.com/service/license-summary/
+
+Ufo Explosion:
+hit-sound-effect-12445
+https://pixabay.com/sound-effects/hit-sound-effect-12445/
+https://pixabay.com/service/license-summary/
